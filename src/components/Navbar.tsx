@@ -1,6 +1,7 @@
 import { AppBar, IconButton, Toolbar, Typography, Stack, Button } from  "@mui/material"
 import { School } from "@mui/icons-material"
 import { ReactElement } from "react"
+// import { Link } from 'react-router-dom'
 
 function Navbar(): ReactElement {
     return (
@@ -13,12 +14,10 @@ function Navbar(): ReactElement {
                     BroncoDirectMe 
                 </Typography>
                 <Stack direction='row' spacing={2} paddingTop={1}>
-                    <Button color='inherit'>Home</Button>
-                    <Button color='inherit'>Documentation</Button>
-                    <Button color='inherit'>Progress</Button>
-                    <Button color='inherit'>Credits</Button>
-
-
+                    <Button color='inherit' href='/'>Home</Button>
+                    <Button color='inherit' href='documentation'>Documentation</Button>
+                    <Button color='inherit' href='progress'>Progress</Button>
+                    <Button color='inherit' href='credits'>Credits</Button>
                 </Stack>
             </Toolbar>
         </AppBar>
