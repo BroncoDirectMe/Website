@@ -1,4 +1,8 @@
 {
+  "name": "website",
+  "homepage": "https://broncodirectme.github.io/Website/",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -20,6 +24,8 @@
   },
   "scripts": {
     "dev": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "lint": "eslint --ext .js,.ts,.jsx,.tsx src",
@@ -45,6 +51,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.2.5",
     "eslint-plugin-promise": "^6.0.1",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "gh-pages": "4.0.0"
   }
 }
