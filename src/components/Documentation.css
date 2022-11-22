@@ -1,0 +1,12 @@
+.menu a,
+.menu a:visited {
+  color: #c60000;
+}
+
+.menu a:hover {
+  color: #4c0021;
+}
+
+.documentationElm {
+  text-align: left;
+}
