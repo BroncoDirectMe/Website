@@ -2,7 +2,7 @@
 import React, { ReactElement, useEffect } from 'react';
 import './Documentation.css';
 
-function testScript(): void {
+function Documentation(): ReactElement {
   useEffect(() => {
     const script = document.createElement('script');
 
@@ -11,7 +11,7 @@ function testScript(): void {
     script.async = true;
     script.onload = () => {
       Flatdoc.run({
-        fetcher: Flatdoc.github('BroncoDirectMe/Frontend'),
+        fetcher: Flatdoc.github('BroncoDirectMe/Website'),
       });
     };
     document.body.appendChild(script);
@@ -20,10 +20,6 @@ function testScript(): void {
       document.body.removeChild(script);
     };
   }, []);
-}
-
-function Documentation(): ReactElement {
-  testScript();
 
   return (
     <section
