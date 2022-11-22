@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import Logo from './logo.svg';
 import './App.css';
 import Navbar  from './components/Navbar';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Home from './components/Home';
 import Documentation from './components/Documentation';
 import Progress from './components/Progress';
@@ -12,7 +12,7 @@ function App(): ReactElement {
   return (
 
     <div className="App">
-      <Router>
+      <HashRouter>
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -20,7 +20,7 @@ function App(): ReactElement {
           <Route path='/progress' element={<Progress />} />
           <Route path='/credits' element={<Credits />} />
         </Routes>
-      </Router>
+      </HashRouter>
       <header className="App-header">
         <img src={Logo} className="App-logo" alt="logo" />
         <p>
