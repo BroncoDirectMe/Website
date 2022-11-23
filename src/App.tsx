@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react';
 import Logo from './logo.svg';
 import './App.css';
-import Navbar  from './components/Navbar';
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Documentation from './components/Documentation';
 import Progress from './components/Progress';
@@ -10,17 +10,16 @@ import Credits from './components/Credits';
 
 function App(): ReactElement {
   return (
-
     <div className="App">
-      <HashRouter>
+      <Router basename="/Website">
         <Navbar />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/documentation' element={<Documentation />} />
-          <Route path='/progress' element={<Progress />} />
-          <Route path='/credits' element={<Credits />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/documentation" element={<Documentation />} />
+          <Route path="/progress" element={<Progress />} />
+          <Route path="/credits" element={<Credits />} />
         </Routes>
-      </HashRouter>
+      </Router>
       <header className="App-header">
         <img src={Logo} className="App-logo" alt="logo" />
         <p>
