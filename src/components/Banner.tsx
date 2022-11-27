@@ -8,8 +8,8 @@ import '@fontsource/sarala';
 export const BannerContainer = styled(Box)(() => ({
   display: 'flex',
   justifyContent: 'center',
-  width: '100%',
-  //   padding: '0px 0px 30px 0px',
+  // width: '100%',
+  padding: '0px 0px 50px 0px',
   backgroundImage: `url(${home})`,
 }));
 
@@ -23,8 +23,10 @@ export const BannerContent = styled(Box)(() => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'start',
-  padding: '40px 40px 20px 40px',
-  background: 'linear-gradient(to top, rgba(30,30,30,0), rgba(30,30,30,1))',
+  // padding: '40px 40px 20px 40px',
+  paddingLeft: '40px',
+
+  // 'linear-gradient(to top, rgba(30,30,30,0), rgba(30,30,30,1))',
 }));
 
 export const BannerTitle = styled(Typography)(({ theme }) => ({
@@ -33,7 +35,7 @@ export const BannerTitle = styled(Typography)(({ theme }) => ({
 }));
 
 export const BannerDescription = styled(Typography)(({ theme }) => ({
-  lineHeight: 1.25,
+  lineHeight: 1.5,
   letterSpacing: 1,
   color: '#ffffff',
   align: 'left',
@@ -41,7 +43,7 @@ export const BannerDescription = styled(Typography)(({ theme }) => ({
 }));
 
 export const BannerSubtitle = styled(Typography)(({ theme }) => ({
-  lineHeight: 1.25,
+  lineHeight: 2,
   letterSpacing: 1,
   maxWidth: '100%',
   marginTop: '0.5em',
@@ -54,6 +56,12 @@ export const BannerSubtitle = styled(Typography)(({ theme }) => ({
 export const BannerButton = styled(Button)(({ theme }) => ({
   backgroundColor: '#000000',
   fontSize: '20px',
+  borderRadius: '16px',
+  marginTop: '0.5em',
+  height: '3em',
+  width: '18em',
+  marginLeft: '40px',
+  // startIcon: '{<DownloadIcon/>}',
   '&:hover': {
     backgroundColor: '#ffffff',
     color: '#000000',

@@ -1,13 +1,14 @@
 import React, { ReactElement } from 'react';
 // import { useMediaQuery } from '@mui/material';
 // import { useTheme } from '@mui/material/styles';
-
-import bronco from './images/thirstbronco.png';
+import DownloadIcon from '@mui/icons-material/Download';
+import bronco from './images/BroncoDirectMeLogo2.png';
 import home from './images/homeBody.png';
 import icon1 from './images/iconFree.png';
 import icon2 from './images/iconUserFriendly.png';
 import icon3 from './images/iconInstall.png';
 import icon4 from './images/iconCommunity.png';
+
 import {
   BannerButton,
   BannerContainer,
@@ -17,7 +18,7 @@ import {
   BannerSubtitle,
   BannerTitle,
 } from './Banner';
-import { Box, Container, Grid } from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import {
   BodyContainer,
   BodyText,
@@ -34,7 +35,18 @@ export default function Home(): ReactElement {
       <BannerContainer>
         <Grid container spacing={2} alignItems="end">
           <Grid item xs={6}>
-            <Container sx={{ padding: '0px 0px 50px 0px' }}>
+            <Container
+              sx={{
+                display: 'flex',
+                alignItems: 'start',
+                justifyContent: 'start',
+                flexDirection: 'column',
+                padding: '30px 0px 40px 0px',
+                margin: '100px 50px 50px 0px',
+                height: '100%',
+                background: 'rgba(30,30,30,0.8)',
+              }}
+            >
               <BannerContent>
                 <BannerTitle variant="h2">BRONCO DIRECT ME</BannerTitle>
                 <BannerDescription variant="h5">
@@ -47,7 +59,7 @@ export default function Home(): ReactElement {
                   ENHANCING AND IMPROVING THE CPP REGISTRATION EXPERIENCE
                 </BannerSubtitle>
               </BannerContent>
-              <BannerButton variant="contained">
+              <BannerButton variant="contained" startIcon={<DownloadIcon />}>
                 Download Extension
               </BannerButton>
             </Container>
@@ -58,13 +70,175 @@ export default function Home(): ReactElement {
         </Grid>
       </BannerContainer>
       <BodyContainer>
-        <BodyText variant="h4">
-          Official Website of the BroncoDirect+ Chrome Extension.
+        <BodyText variant="h4" sx={{ paddingTop: '3em' }}>
+          A Simple Add-On that can Maximize your Scheduling Needs
         </BodyText>
-        <BodyText variant="h5" sx={{ textAlign: 'start' }}>
-          This extension was created with the collaboration of Cal Poly Pomona
-          students to provide an extension that assist CPP students of ALL
-          majors to register classes.
+        <BodyText
+          variant="h5"
+          sx={{
+            paddingTop: '3em',
+            maxWidth: '45em',
+            fontWeight: 'lighter',
+          }}
+        >
+          Through the hush and rush of registering for classes, you can't ignore
+          the tediousness of managing extra tabs searching up professors'
+          ratings RateMyProfessor.
+        </BodyText>
+        <BodyText
+          variant="h5"
+          sx={{ paddingBottom: '3em', fontWeight: 'lighter' }}
+        >
+          Why waste time when you can let BroncoDirectMe search for you!
+        </BodyText>
+        <Grid
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="start"
+        >
+          <Grid item>
+            <Grid
+              container
+              direction="column"
+              justifyContent="center"
+              marginBottom={'1em'}
+              padding="0px 20px 0px 20px"
+            >
+              <Grid item>
+                <Box
+                  component="img"
+                  sx={{
+                    height: '150px',
+                    width: '150px',
+                    backgroundColor: 'rgba(30, 30, 30, 0.7)',
+                    padding: '10px 10px 10px 10px',
+                    margin: '20px',
+                    borderRadius: '150px',
+                  }}
+                  alt="Completely Free"
+                  src={icon1}
+                />
+
+                <Typography
+                  variant="h5"
+                  sx={{ marginBottom: '10px', fontStyle: 'italic' }}
+                >
+                  No Cost
+                </Typography>
+                <Typography width="250px">
+                  Free of charge for all Cal Poly Pomona students
+                </Typography>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid item>
+            <Grid
+              container
+              direction="column"
+              justifyContent="center"
+              marginBottom={'2em'}
+              padding="0px 20px 0px 20px"
+            >
+              <Grid item>
+                <Box
+                  component="img"
+                  sx={{
+                    height: '150px',
+                    width: '150px',
+                    backgroundColor: 'rgba(30, 30, 30, 0.7)',
+                    padding: '10px 10px 10px 10px',
+                    margin: '20px',
+                    borderRadius: '150px',
+                  }}
+                  alt="User Friendly"
+                  src={icon2}
+                />
+                <Typography
+                  variant="h5"
+                  sx={{ marginBottom: '10px', fontStyle: 'italic' }}
+                >
+                  User Friendly
+                </Typography>
+                <Typography width="250px">
+                  Basic user interface, very minimal tech savviness needed
+                </Typography>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid item>
+            <Grid
+              container
+              direction="column"
+              justifyContent="center"
+              marginBottom={'2em'}
+              padding="0px 20px 0px 20px"
+            >
+              <Grid item>
+                <Box
+                  component="img"
+                  sx={{
+                    height: '150px',
+                    width: '150px',
+                    backgroundColor: 'rgba(30, 30, 30, 0.7)',
+                    padding: '10px 10px 10px 10px',
+                    margin: '20px',
+                    borderRadius: '150px',
+                  }}
+                  alt="Easy Installation"
+                  src={icon3}
+                />
+                <Typography
+                  variant="h5"
+                  sx={{ marginBottom: '10px', fontStyle: 'italic' }}
+                >
+                  Easy Installation
+                </Typography>
+                <Typography width="250px">
+                  Automatic adaptation when BroncoDirect Class Search page is
+                  loaded to display the ratings
+                </Typography>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid item>
+            <Grid
+              container
+              direction="column"
+              justifyContent="center"
+              marginBottom={'2em'}
+              padding="0px 20px 0px 20px"
+            >
+              <Grid item>
+                <Box
+                  component="img"
+                  sx={{
+                    height: '150px',
+                    width: '150px',
+                    backgroundColor: 'rgba(30, 30, 30, 0.7)',
+                    padding: '10px 10px 10px 10px',
+                    margin: '20px',
+                    borderRadius: '150px',
+                  }}
+                  alt="Community"
+                  src={icon4}
+                />
+                <Typography
+                  variant="h5"
+                  sx={{ marginBottom: '10px', fontStyle: 'italic' }}
+                >
+                  Support Community
+                </Typography>
+                <Typography width="250px">
+                  With your usage of our extension, you help support our CPP CS
+                  Discord and our fellow CPP devs!
+                </Typography>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+        <BodyText variant="h4" sx={{ padding: '2em' }}>
+          Demonstration of BroncoDirectMe 1.0.0
         </BodyText>
         <Box
           sx={{
@@ -76,9 +250,8 @@ export default function Home(): ReactElement {
         >
           <Grid
             container
-            p={3}
+            // p={3}
             rowSpacing={10}
-            columnSpacing={{ xs: 0 }}
             sx={{
               marginTop: '0px',
               paddingBottom: '4em',
@@ -94,25 +267,21 @@ export default function Home(): ReactElement {
               }}
             >
               <GridItem>
-                <Box
-                  component="img"
-                  sx={{
-                    maxHeight: { xs: 233, md: 167 },
-                    maxWidth: { xs: 350, md: 250 },
-                    marginBottom: '30px',
-                  }}
-                  alt="The house from the offer."
-                  src={icon1}
-                />
+                <iframe
+                  src="https://streamable.com/e/55ydlk"
+                  frameBorder="0"
+                  width="100%"
+                  height="100%"
+                ></iframe>
                 <BodyText
                   variant="h4"
                   sx={{ color: 'white', fontWeight: 'bold' }}
                 >
-                  No Cost
+                  A Simple Click Away
                 </BodyText>
-                <GridText variant="h5">
-                  The extension is free of charge for all Cal Poly Pomona
-                  students
+                <GridText variant="h6">
+                  A single button click can show you all the essential details
+                  straight from RateMyProfessor reviews.
                 </GridText>
               </GridItem>
             </Grid>
@@ -126,89 +295,21 @@ export default function Home(): ReactElement {
               }}
             >
               <GridItem>
-                <Box
-                  component="img"
-                  sx={{
-                    maxHeight: { xs: 233, md: 167 },
-                    maxWidth: { xs: 350, md: 250 },
-                    marginBottom: '30px',
-                  }}
-                  alt="The house from the offer."
-                  src={icon2}
-                />
+                <iframe
+                  src="https://streamable.com/e/sc05gd"
+                  frameBorder="0"
+                  width="100%"
+                  height="60%"
+                ></iframe>
                 <BodyText
                   variant="h4"
                   sx={{ color: 'white', fontWeight: 'bold' }}
                 >
-                  User Friendly
+                  Easy To Reach
                 </BodyText>
-                <GridText variant="h5">
-                  The extension was designed for any chrome user to use for
-                  class registration without any prior knowledge needed
-                </GridText>
-              </GridItem>
-            </Grid>
-            <Grid
-              item
-              xs={6}
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              <GridItem>
-                <Box
-                  component="img"
-                  sx={{
-                    maxHeight: { xs: 233, md: 167 },
-                    maxWidth: { xs: 350, md: 250 },
-                    marginBottom: '30px',
-                  }}
-                  alt="The house from the offer."
-                  src={icon3}
-                />
-                <BodyText
-                  variant="h4"
-                  sx={{ color: 'white', fontWeight: 'bold' }}
-                >
-                  Easy Installation
-                </BodyText>
-                <GridText variant="h5">
-                  One click to add the plug-in and it will automatically assist
-                  you in your class scheduling needs.
-                </GridText>
-              </GridItem>
-            </Grid>
-            <Grid
-              item
-              xs={6}
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              <GridItem>
-                <Box
-                  component="img"
-                  sx={{
-                    maxHeight: { xs: 233, md: 167 },
-                    maxWidth: { xs: 350, md: 250 },
-                    marginBottom: '30px',
-                  }}
-                  alt="The house from the offer."
-                  src={icon4}
-                />
-                <BodyText
-                  variant="h4"
-                  sx={{ color: 'white', fontWeight: 'bold' }}
-                >
-                  Support Community
-                </BodyText>
-                <GridText variant="h5">
-                  With your usage of our extension, you help support our CPP CS
-                  Discord and our fellow CPP devs!
+                <GridText variant="h6">
+                  Accessible not just on BroncoDirect but also from your home
+                  toolbar!
                 </GridText>
               </GridItem>
             </Grid>
@@ -216,7 +317,9 @@ export default function Home(): ReactElement {
         </Box>
 
         <FooterText variant="h4">Pretty Handy Ain't It?</FooterText>
-        <BannerButton variant="contained">Download Extension</BannerButton>
+        <BannerButton variant="contained" startIcon={<DownloadIcon />}>
+          Download Extension
+        </BannerButton>
         <Footer variant="h6">
           Developed by the students of California State Polytechnic University,
           Pomona
