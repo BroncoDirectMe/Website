@@ -14,7 +14,7 @@ function Navbar(): ReactElement {
                     BroncoDirectMe 
                 </Typography>
                 <Stack direction='row' spacing={2} paddingTop={1}>
-                    <Button color='inherit' href='/'>Home</Button>
+                    <Button color='inherit' href='./'>Home</Button>
                     <Button color='inherit' href='documentation'>Documentation</Button>
                     <Button color='inherit' href='progress'>Progress</Button>
                     <Button color='inherit' href='credits'>Credits</Button>
