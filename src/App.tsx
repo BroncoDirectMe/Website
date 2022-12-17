@@ -81,11 +81,17 @@ function App(): ReactElement {
         </Stack>
 
         <Accordion
-          sx={{ backgroundColor: '#8f8c8c', color: 'white', border: "3px solid gray" }}
+          sx={{
+            backgroundColor: '#8f8c8c',
+            color: 'white',
+            border: '3px solid gray',
+          }}
           className="disclaimer"
         >
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon sx={{ color: 'white', fontSize: "2rem" }} />}
+            expandIcon={
+              <ExpandMoreIcon sx={{ color: 'white', fontSize: '2rem' }} />
+            }
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
