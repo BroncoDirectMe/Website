@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react';
-import './App.css';
 import JaronImage from './images/jaroon.jpg';
 import AlexanderImage from './images/alexander.jpg';
 import AliImage from './images/ali.jpg';
