@@ -37,9 +37,33 @@
   }
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  background-color: #237735;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(207, 253, 189, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  height: 100px;
+}
+
 footer {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   background-color: lightgray;
   padding-bottom: 25vh;
@@ -47,7 +71,7 @@ footer {
   flex-direction: column;
 }
 
-.disclaimer{
+.disclaimer {
   width: 75vw;
   margin-top: 20px;
 }
