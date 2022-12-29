@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Documentation from './components/Documentation';
 import Progress from './components/Progress';
 import Credits from './components/Credits';
+
 import {
   Accordion,
   AccordionDetails,
@@ -29,7 +30,6 @@ function App(): ReactElement {
           <Route path="/credits" element={<Credits />} />
         </Routes>
       </Router>
-
       <footer>
         <Stack
           direction="row"
