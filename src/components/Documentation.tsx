@@ -26,11 +26,6 @@ function Documentation(): ReactElement {
       role="flatdoc"
       className="big-h3 large-brief no-literate documentationElm"
     >
-      <div className="navbar">
-        <a href="index.html">Home</a>
-        <a href="current_progress.html">Current Progress</a>
-        <a href="documentation.html">Documentation</a>
-      </div>
       <div className="header">
         <div className="left">
           <h1>BroncoDirectMe</h1>
