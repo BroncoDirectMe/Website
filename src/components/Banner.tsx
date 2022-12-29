@@ -3,8 +3,6 @@ import { styled } from '@mui/material/styles';
 import bronco from './images/thirstbronco.png';
 import home from './images/home.png';
 
-import '@fontsource/sarala';
-
 export const BannerContainer = styled(Box)(() => ({
   display: 'flex',
   justifyContent: 'center',

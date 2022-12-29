@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "homepage": "https://broncodirectme.github.io/Website",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

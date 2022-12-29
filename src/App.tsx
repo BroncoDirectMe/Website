@@ -1,11 +1,11 @@
 import React, { ReactElement } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Documentation from './components/Documentation';
 import Progress from './components/Progress';
 import Credits from './components/Credits';
+import { createBrowserRouter } from 'react-router-dom';
 
 import {
   Accordion,
@@ -18,18 +18,31 @@ import {
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-function App(): ReactElement {
+export const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />,
+    children: [
+      {
+        path: 'documentation',
+        element: <Documentation />,
+      },
+      {
+        path: 'progress',
+        element: <Progress />,
+      },
+      {
+        path: 'credits',
+        element: <Credits />,
+      },
+    ],
+  },
+]);
+
+export function App(): ReactElement {
   return (
     <div className="App">
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/documentation" element={<Documentation />} />
-          <Route path="/progress" element={<Progress />} />
-          <Route path="/credits" element={<Credits />} />
-        </Routes>
-      </Router>
+      <Navbar />
       <footer>
         <Stack
           direction="row"
@@ -97,5 +110,3 @@ function App(): ReactElement {
     </div>
   );
 }
-
-export default App;
