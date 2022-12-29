@@ -1,13 +1,22 @@
 {
   "files": {
-    "main.css": "/Website/static/css/main.63b58698.css",
-    "main.js": "/Website/static/js/main.b0552829.js",
+    "main.css": "/Website/static/css/main.de923515.css",
+    "main.js": "/Website/static/js/main.81ec34f8.js",
+    "static/media/BroncoDirectMeLogo2.png": "/Website/static/media/BroncoDirectMeLogo2.51bcb13668a27efe560d.png",
+    "static/media/homeBody.png": "/Website/static/media/homeBody.6f55980d0845ef7e3bd5.png",
+    "static/media/home.png": "/Website/static/media/home.f55afb5cebce25f865e9.png",
+    "static/media/alan.png": "/Website/static/media/alan.8d27064de217b20231c2.png",
+    "static/media/ali.jpg": "/Website/static/media/ali.1b29262dcb303fbde82f.jpg",
+    "static/media/pattycakes.jpg": "/Website/static/media/pattycakes.0e44e79066bd64ee86ce.jpg",
+    "static/media/thirstbronco.png": "/Website/static/media/thirstbronco.e5e3e8e36077f317d18c.png",
+    "static/media/jaroon.jpg": "/Website/static/media/jaroon.63f3ab52e11d3ef53508.jpg",
+    "static/media/t1mato.jpg": "/Website/static/media/t1mato.dc9a9056fea795c68827.jpg",
     "index.html": "/Website/index.html",
-    "main.63b58698.css.map": "/Website/static/css/main.63b58698.css.map",
-    "main.b0552829.js.map": "/Website/static/js/main.b0552829.js.map"
+    "main.de923515.css.map": "/Website/static/css/main.de923515.css.map",
+    "main.81ec34f8.js.map": "/Website/static/js/main.81ec34f8.js.map"
   },
   "entrypoints": [
-    "static/css/main.63b58698.css",
-    "static/js/main.b0552829.js"
+    "static/css/main.de923515.css",
+    "static/js/main.81ec34f8.js"
   ]
 }
