@@ -1,7 +1,6 @@
 import { AppBar, IconButton, Toolbar, Typography, Stack, Button } from  "@mui/material"
 import { School } from "@mui/icons-material"
 import { ReactElement } from "react"
-// import { Link } from 'react-router-dom'
 
 function Navbar(): ReactElement {
     return (
@@ -18,6 +17,9 @@ function Navbar(): ReactElement {
                     <Button color='inherit' href='documentation'>Documentation</Button>
                     <Button color='inherit' href='progress'>Progress</Button>
                     <Button color='inherit' href='credits'>Credits</Button>
+                    <Button color='inherit' href='https://chrome.google.com/webstore/category/extensions' target='_blank'>
+                       Download
+                    </Button>
                 </Stack>
             </Toolbar>
         </AppBar>
