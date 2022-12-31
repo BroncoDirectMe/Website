@@ -1,11 +1,11 @@
 import React, { ReactElement } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Documentation from './components/Documentation';
 import Progress from './components/Progress';
 import Credits from './components/Credits';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import {
   Accordion,
@@ -21,7 +21,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 function App(): ReactElement {
   return (
     <div className="App">
-      <Router>
+      <Router basename="/Website">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
