@@ -1,6 +1,10 @@
 .App {
   text-align: center;
 }
+html,
+body {
+  overflow-x: hidden;
+}
 
 .grid-container {
   display: grid;

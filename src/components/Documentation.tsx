@@ -33,9 +33,7 @@ function Documentation(): ReactElement {
         <div className="right">
           {/* GitHub buttons: see http://ghbtns.com */}
           <iframe
-            src="https://ghbtns.com/github-btn.html?user=jaroonl&amp;repo=Website&amp;type=watch&amp;count=true"
-            frameBorder="0"
-            scrolling="0"
+            src="https://ghbtns.com/github-btn.html?user=BroncoDirectMe&amp;repo=Website&amp;type=watch&amp;count=true"
             width="110"
             height="20"
           ></iframe>

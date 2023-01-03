@@ -14,6 +14,9 @@ import { School } from '@mui/icons-material';
 import { ReactElement, useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 
+/**
+ * Customized responsive navbar from https://mui.com/material-ui/react-app-bar/#app-bar-with-responsive-menu
+ */
 export default function Navbar(): ReactElement {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>): void =>
