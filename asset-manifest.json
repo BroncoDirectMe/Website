@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Website/static/css/main.de923515.css",
-    "main.js": "/Website/static/js/main.43503e9f.js",
+    "main.css": "/Website/static/css/main.7cc51fa5.css",
+    "main.js": "/Website/static/js/main.69806767.js",
     "static/media/BroncoDirectMeLogo2.png": "/Website/static/media/BroncoDirectMeLogo2.51bcb13668a27efe560d.png",
     "static/media/homeBody.png": "/Website/static/media/homeBody.6f55980d0845ef7e3bd5.png",
     "static/media/home.png": "/Website/static/media/home.f55afb5cebce25f865e9.png",
@@ -12,11 +12,11 @@
     "static/media/jaroon.jpg": "/Website/static/media/jaroon.63f3ab52e11d3ef53508.jpg",
     "static/media/t1mato.jpg": "/Website/static/media/t1mato.dc9a9056fea795c68827.jpg",
     "index.html": "/Website/index.html",
-    "main.de923515.css.map": "/Website/static/css/main.de923515.css.map",
-    "main.43503e9f.js.map": "/Website/static/js/main.43503e9f.js.map"
+    "main.7cc51fa5.css.map": "/Website/static/css/main.7cc51fa5.css.map",
+    "main.69806767.js.map": "/Website/static/js/main.69806767.js.map"
   },
   "entrypoints": [
-    "static/css/main.de923515.css",
-    "static/js/main.43503e9f.js"
+    "static/css/main.7cc51fa5.css",
+    "static/js/main.69806767.js"
   ]
 }
