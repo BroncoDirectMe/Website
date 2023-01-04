@@ -33,12 +33,12 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
-  background-color: #237735;
+  background-color: #55a072;
   padding: 10px;
 }
 .grid-item {
-  background-color: rgba(207, 253, 189, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  background-color: #55a072;
+  border: 1px solid #55a072;
   padding: 20px;
   font-size: 20px;
   text-align: center;
