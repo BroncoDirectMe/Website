@@ -4,28 +4,29 @@ import AlexanderImage from './images/alexander.jpg';
 import AliImage from './images/ali.jpg';
 import AlanImage from './images/alan.png';
 import LinaImage from './images/lina.jpg';
-import DarrenImage from './images/darrenbt.png';
 import JonahImage from './images/jonah.jpg';
-import JasonImage from './images/guywhocode.png';
 import MatthewImage from './images/leaversa.gif';
 import MarcImage from './images/marccruz.jpg';
 import BobImage from './images/misslame.png';
-import PatrickImage from './images/pattycakes.jpg';
-import TonyImage from './images/peppacaiou.png';
-import ProductBobImage from './images/productbob.png';
+import ProductBobImage from './images/productbob.jpg';
 import SamanyuImage from './images/samanyu.png';
 import TimothyImage from './images/t1mato.jpg';
 import MatthewPImage from './images/matthewp.jpg';
-import ValImage from './images/val.jpg';
-import LucianoImage from './images/zombimigz.png';
+import ValImage from './images/valen.jpg';
+import LucianoImage from './images/luciano.png';
+import DevinImage from './images/devin.jpg';
+import ElenaImage from './images/elena.png';
+import PatrickImage from './images/patrick.jpg';
 import GithubImage from './images/github.png';
 import LinkedinImage from './images/linkedin.png';
+import BillyBroncoImage from './images/billybronco.png';
 
 function Credits(): ReactElement {
   return (
     <>
       <div className="grid-container">
         <div className="grid-item"> </div>
+
         <div className="grid-item">
           {' '}
           <img
@@ -92,7 +93,7 @@ function Credits(): ReactElement {
             alt="productbob"
             style={{ width: '200px', height: '200px', borderRadius: '50%' }}
           />
-          <h2>Product Bob</h2>
+          <h2>Jacob Rothman</h2>
           <h3>Product Manager</h3>
           <a href="https://github.com/U-k-t" target="_blank" rel="noreferrer">
             <img
@@ -101,17 +102,23 @@ function Credits(): ReactElement {
               style={{ width: '30px', height: '30px', borderRadius: '50%' }}
             />
           </a>
-          <img
-            src={LinkedinImage}
-            alt="link"
-            style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-          />
+          <a
+            href="https://www.linkedin.com/in/jacob-rothman/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={LinkedinImage}
+              alt="link"
+              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
+            />
+          </a>
         </div>
         <div className="grid-item"> </div>
         <div className="grid-item">
           {' '}
           <img
-            src={JasonImage}
+            src={BillyBroncoImage}
             alt="jason"
             style={{ width: '200px', height: '200px', borderRadius: '50%' }}
           />
@@ -239,7 +246,7 @@ function Credits(): ReactElement {
         <div className="grid-item">
           {' '}
           <img
-            src={TonyImage}
+            src={BillyBroncoImage}
             alt="tony"
             style={{ width: '200px', height: '200px', borderRadius: '50%' }}
           />
@@ -271,7 +278,7 @@ function Credits(): ReactElement {
         <div className="grid-item">
           {' '}
           <img
-            src={DarrenImage}
+            src={BillyBroncoImage}
             alt="darren"
             style={{ width: '200px', height: '200px', borderRadius: '50%' }}
           />
@@ -336,7 +343,7 @@ function Credits(): ReactElement {
           {' '}
           <img
             src={PatrickImage}
-            alt="marc"
+            alt="patrick"
             style={{ width: '200px', height: '200px', borderRadius: '50%' }}
           />
           <h2>Patrick Hoang</h2>
@@ -352,11 +359,17 @@ function Credits(): ReactElement {
               style={{ width: '30px', height: '30px', borderRadius: '50%' }}
             />
           </a>
-          <img
-            src={LinkedinImage}
-            alt="link"
-            style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-          />
+          <a
+            href="https://www.linkedin.com/mwlite/in/patrick-hoang-432694252"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={LinkedinImage}
+              alt="link"
+              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
+            />
+          </a>
         </div>
 
         <div className="grid-item">
@@ -502,6 +515,34 @@ function Credits(): ReactElement {
         <div className="grid-item">
           {' '}
           <img
+            src={ElenaImage}
+            alt="elena"
+            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
+          />
+          <h2>Elena Hernandez</h2>
+          <h3>Quality Engineer</h3>
+          <a href="https://github.com/E-A-H62" target="_blank" rel="noreferrer">
+            <img
+              src={GithubImage}
+              alt="git"
+              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/elena-hernandez-053371248"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={LinkedinImage}
+              alt="link"
+              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
+            />
+          </a>
+        </div>
+        <div className="grid-item">
+          {' '}
+          <img
             src={AlexanderImage}
             alt="alex"
             style={{ width: '200px', height: '200px', borderRadius: '50%' }}
@@ -515,6 +556,26 @@ function Credits(): ReactElement {
               style={{ width: '30px', height: '30px', borderRadius: '50%' }}
             />
           </a>
+          <img
+            src={LinkedinImage}
+            alt="link"
+            style={{ width: '30px', height: '30px', borderRadius: '50%' }}
+          />
+        </div>
+        <div className="grid-item">
+          {' '}
+          <img
+            src={BillyBroncoImage}
+            alt="nick"
+            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
+          />
+          <h2>Nick</h2>
+          <h3>Quality Engineer</h3>
+          <img
+            src={GithubImage}
+            alt="git"
+            style={{ width: '30px', height: '30px', borderRadius: '50%' }}
+          />
           <img
             src={LinkedinImage}
             alt="link"
@@ -576,6 +637,38 @@ function Credits(): ReactElement {
           </a>
           <a
             href="https://www.linkedin.com/in/matthew-plascencia/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={LinkedinImage}
+              alt="link"
+              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
+            />
+          </a>
+        </div>
+        <div className="grid-item">
+          {' '}
+          <img
+            src={DevinImage}
+            alt="devin"
+            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
+          />
+          <h2>Devin Khun</h2>
+          <h3>Product Mentee & Project Mentee</h3>
+          <a
+            href="https://github.com/Shadowowl888"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={GithubImage}
+              alt="git"
+              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/devin-khun/"
             target="_blank"
             rel="noreferrer"
           >
