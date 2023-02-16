@@ -95,8 +95,9 @@ export default function Navbar(): ReactElement {
               </MenuItem>
               <MenuItem
                 component="a"
-                href="https://chrome.google.com/webstore/category/extensions"
+                href="https://chrome.google.com/webstore/detail/broncodirectme/kcbdmdlehcmkgknmmfjjiaclhpplibda"
                 target="_blank"
+                rel="noopener"
               >
                 <Typography color="inherit" textAlign="center">
                   Download
@@ -145,8 +146,9 @@ export default function Navbar(): ReactElement {
               </Button>
               <Button
                 color="inherit"
-                href="https://chrome.google.com/webstore/category/extensions"
+                href="https://chrome.google.com/webstore/detail/broncodirectme/kcbdmdlehcmkgknmmfjjiaclhpplibda"
                 target="_blank"
+                rel="noopener"
               >
                 Download
               </Button>

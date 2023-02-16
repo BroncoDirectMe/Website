@@ -7,7 +7,7 @@ import Progress from './components/Progress';
 import Credits from './components/Credits';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-const devBuild = true;
+const devBuild = false;
 
 function App(): ReactElement {
   return (

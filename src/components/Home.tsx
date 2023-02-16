@@ -18,7 +18,7 @@ import {
   BannerSubtitle,
   BannerTitle,
 } from './Banner';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Grid, Link, Typography } from '@mui/material';
 import {
   BodyContainer,
   BodyText,
@@ -59,9 +59,16 @@ export default function Home(): ReactElement {
                   ENHANCING AND IMPROVING THE CPP REGISTRATION EXPERIENCE
                 </BannerSubtitle>
               </BannerContent>
-              <BannerButton variant="contained" startIcon={<DownloadIcon />}>
-                Download Extension
-              </BannerButton>
+              <Link
+                href="https://chrome.google.com/webstore/detail/broncodirectme/kcbdmdlehcmkgknmmfjjiaclhpplibda"
+                target="_blank"
+                rel="noopener"
+                underline="none"
+              >
+                <BannerButton variant="contained" startIcon={<DownloadIcon />}>
+                  Download Extension
+                </BannerButton>
+              </Link>
             </Container>
           </Grid>
           <Grid item xs={6}>
@@ -317,9 +324,16 @@ export default function Home(): ReactElement {
         </Box>
 
         <FooterText variant="h4">Pretty Handy Ain't It?</FooterText>
-        <BannerButton variant="contained" startIcon={<DownloadIcon />}>
-          Download Extension
-        </BannerButton>
+        <Link
+          href="https://chrome.google.com/webstore/detail/broncodirectme/kcbdmdlehcmkgknmmfjjiaclhpplibda"
+          target="_blank"
+          rel="noopener"
+          underline="none"
+        >
+          <BannerButton variant="contained" startIcon={<DownloadIcon />}>
+            Download Extension
+          </BannerButton>
+        </Link>
         <Footer variant="h6">
           Developed by the students of California State Polytechnic University,
           Pomona
