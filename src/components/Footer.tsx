@@ -42,7 +42,7 @@ export default function Footer(): ReactElement {
           // Two different divider elements to account for the change in footer orientation from horizontal to vertical
         }
       >
-        <Link variant="h6" color="black" underline="none" href="/">
+        <Link variant="h6" color="black" underline="none" href="./">
           Home
         </Link>
         <Link variant="h6" color="black" underline="none" href="progress">
