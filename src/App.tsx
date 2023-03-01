@@ -3,7 +3,6 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Documentation from './components/Documentation';
-import Progress from './components/Progress';
 import Credits from './components/Credits';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -17,7 +16,6 @@ function App(): ReactElement {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/documentation" element={<Documentation />} />
-          <Route path="/progress" element={<Progress />} />
           <Route path="/credits" element={<Credits />} />
         </Routes>
       </Router>

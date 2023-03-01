@@ -83,11 +83,6 @@ export default function Navbar(): ReactElement {
                   Documentation
                 </Typography>
               </MenuItem>
-              <MenuItem component="a" href="progress">
-                <Typography color="inherit" textAlign="center">
-                  Progress
-                </Typography>
-              </MenuItem>
               <MenuItem component="a" href="credits">
                 <Typography color="inherit" textAlign="center">
                   Credits
@@ -95,8 +90,9 @@ export default function Navbar(): ReactElement {
               </MenuItem>
               <MenuItem
                 component="a"
-                href="https://chrome.google.com/webstore/category/extensions"
+                href="https://chrome.google.com/webstore/detail/broncodirectme/kcbdmdlehcmkgknmmfjjiaclhpplibda"
                 target="_blank"
+                rel="noopener"
               >
                 <Typography color="inherit" textAlign="center">
                   Download
@@ -137,16 +133,14 @@ export default function Navbar(): ReactElement {
               <Button color="inherit" href="documentation">
                 Documentation
               </Button>
-              <Button color="inherit" href="progress">
-                Progress
-              </Button>
               <Button color="inherit" href="credits">
                 Credits
               </Button>
               <Button
                 color="inherit"
-                href="https://chrome.google.com/webstore/category/extensions"
+                href="https://chrome.google.com/webstore/detail/broncodirectme/kcbdmdlehcmkgknmmfjjiaclhpplibda"
                 target="_blank"
+                rel="noopener"
               >
                 Download
               </Button>
