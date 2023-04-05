@@ -51,11 +51,11 @@ function CreditElement({
   userLinkedin = 'https://www.linkedin.com/',
 }: creditProps): ReactElement {
   return (
-    <Grid item xs={1} style={{ height: '25vh' }}>
+    <Grid item xs={1} style={{ height: '25vh', marginBottom: '1.5%' }}>
       <img
         src={imageLink}
         alt={imageAlt}
-        style={{ height: '15vh', borderRadius: '5em' }}
+        style={{ height: '15vh', borderRadius: '10vh' }}
       />
       <h2>{userName}</h2>
       <h3>{userRole}</h3>
@@ -80,6 +80,8 @@ function CreditElement({
 /**
  * Template accordion child element
  * @param title Title of accordion
+ * @parem expand Expand state of accordion
+ * @param change Function to close other open accordions
  * @param children Accordion children
  * @returns MUI accordion element
  */
@@ -147,7 +149,7 @@ function MaintainerComponent(): ReactElement {
         imageLink={BillyBroncoImage}
         imageAlt="jason"
         userName="Jason Agus"
-        userRole="Maintainer"
+        userRole="Maintainer, Developer"
         userGithub="https://github.com/GuyWhoCode"
         userLinkedin="https://www.linkedin.com/in/jason-agus-27808922b/"
       ></CreditElement>
@@ -156,7 +158,7 @@ function MaintainerComponent(): ReactElement {
         imageLink={PatrickImage}
         imageAlt="patrick"
         userName="Patrick Hoang"
-        userRole="Maintainer"
+        userRole="Maintainer, Developer"
         userGithub="https://github.com/PattyCakesxD"
         userLinkedin="https://www.linkedin.com/mwlite/in/patrick-hoang-432694252"
       ></CreditElement>
@@ -165,7 +167,7 @@ function MaintainerComponent(): ReactElement {
         imageLink={MatthewImage}
         imageAlt="matthew"
         userName="Matthew Kwong"
-        userRole="Maintainer"
+        userRole="Maintainer, Developer"
         userGithub="https://github.com/Leaversa"
         userLinkedin="https://www.linkedin.com/in/matthew--kwong/"
       ></CreditElement>
@@ -180,54 +182,46 @@ function DeveloperComponents(): ReactElement {
   return (
     <>
       <CreditElement
-        imageLink={LinaImage}
-        imageAlt="lina"
-        userName="Lina Kang"
-        userRole="Primary Feature Dev"
-        userGithub="https://github.com/dal07065"
-        userLinkedin="https://www.linkedin.com/in/linapoolmkang"
-      ></CreditElement>
-
-      <CreditElement
         imageLink={AliImage}
         imageAlt="ali"
         userName="Ali Momennasab"
-        userRole="Primary Feature Dev"
+        userRole="Developer"
         userGithub="https://github.com/alimomennasab"
         userLinkedin="https://www.linkedin.com/in/amomennasab/"
-      ></CreditElement>
-
-      <CreditElement
-        imageLink={BillyBroncoImage}
-        imageAlt="tony"
-        userName="Tony Tong"
-        userRole="Primary Feature Dev"
-        userGithub="https://github.com/peppacaiou"
-        userLinkedin="https://www.linkedin.com/in/tony-tong-699631240/"
-      ></CreditElement>
-      <CreditElement
-        imageLink={BillyBroncoImage}
-        imageAlt="darren"
-        userName="Darren Banhthai"
-        userRole="Secondary Feature Dev"
-        userGithub="https://github.com/DarrenBT"
-        userLinkedin="https://www.linkedin.com/in/darren-banhthai-6731a5221"
       ></CreditElement>
 
       <CreditElement
         imageLink={ValImage}
         imageAlt="val"
         userName="Valen DeLeon"
-        userRole="Secondary Feature Dev"
+        userRole="Developer"
         userGithub="https://github.com/wheatleyinabox"
         userLinkedin="https://www.linkedin.com/in/valeriedeleon-ca"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={LinaImage}
+        imageAlt="lina"
+        userName="Lina Kang"
+        userRole="Legacy Developer"
+        userGithub="https://github.com/dal07065"
+        userLinkedin="https://www.linkedin.com/in/linapoolmkang"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={BillyBroncoImage}
+        imageAlt="tony"
+        userName="Tony Tong"
+        userRole="Legacy Developer"
+        userGithub="https://github.com/peppacaiou"
+        userLinkedin="https://www.linkedin.com/in/tony-tong-699631240/"
       ></CreditElement>
 
       <CreditElement
         imageLink={TimothyImage}
         imageAlt="tim"
         userName="Timothy Lee"
-        userRole="Secondary Feature Dev"
+        userRole="Legacy Developer"
         userGithub="https://github.com/t1mato"
         userLinkedin="www.linkedin.com/in/tnlee1"
       ></CreditElement>
@@ -236,7 +230,7 @@ function DeveloperComponents(): ReactElement {
         imageLink={JaronImage}
         imageAlt="jaron"
         userName="Jaron Lin"
-        userRole="Secondary Feature Dev"
+        userRole="Legacy Developer"
         userGithub="https://github.com/jaroonl"
         userLinkedin="https://www.linkedin.com/in/jaron-lin-540a76215/"
       ></CreditElement>
@@ -245,7 +239,7 @@ function DeveloperComponents(): ReactElement {
         imageLink={JonahImage}
         imageAlt="jonah"
         userName="Jonah Lynse"
-        userRole="Secondary Feature Dev"
+        userRole="Legacy Developer"
         userGithub="https://github.com/drjonah"
         userLinkedin="https://www.linkedin.com/in/jonah-lysne/"
       ></CreditElement>
@@ -254,7 +248,7 @@ function DeveloperComponents(): ReactElement {
         imageLink={AlanImage}
         imageAlt="alan"
         userName="Alan Mong"
-        userRole="Secondary Feature Dev"
+        userRole="Legacy Developer"
         userGithub="https://github.com/alinz22"
         userLinkedin="https://www.linkedin.com/in/alan-mong-46427b250/"
       ></CreditElement>
@@ -263,9 +257,18 @@ function DeveloperComponents(): ReactElement {
         imageLink={SamanyuImage}
         imageAlt="samanyu"
         userName="Samanyu Satheesh"
-        userRole="Secondary Feature Dev"
+        userRole="Legacy Developer"
         userGithub="https://github.com/Samanyu24X"
         userLinkedin="https://www.linkedin.com/in/samanyu-satheesh"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={BillyBroncoImage}
+        imageAlt="darren"
+        userName="Darren Banhthai"
+        userRole="Contributor"
+        userGithub="https://github.com/DarrenBT"
+        userLinkedin="https://www.linkedin.com/in/darren-banhthai-6731a5221"
       ></CreditElement>
     </>
   );
