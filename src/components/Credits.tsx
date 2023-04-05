@@ -90,12 +90,12 @@ function AccordianElement({
   children,
 }: {
   title: string;
-  expand: boolean;
+  expand: string | boolean;
   change: (event: React.SyntheticEvent, isExpanded: boolean) => void;
   children: ReactElement;
 }): ReactElement {
   return (
-    <Accordion expanded={expand} onChange={change}>
+    <Accordion expanded={expand === title} onChange={change}>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <Typography>{title}</Typography>
       </AccordionSummary>
@@ -104,13 +104,9 @@ function AccordianElement({
   );
 }
 
-function LeaderComponents(): ReactElement {
+function MentorComponents(): ReactElement {
   return (
     <>
-      <Grid item xs={1}>
-        {' '}
-      </Grid>
-
       <CreditElement
         imageLink={LucianoImage}
         imageAlt="luciano"
@@ -137,7 +133,42 @@ function LeaderComponents(): ReactElement {
         userGithub="https://github.com/U-k-t"
         userLinkedin="https://www.linkedin.com/in/jacob-rothman/"
       ></CreditElement>
+    </>
+  );
+}
 
+function MaintainerComponent(): ReactElement {
+  return (
+    <>
+      <Grid item xs={1}>
+        {' '}
+      </Grid>
+      <CreditElement
+        imageLink={BillyBroncoImage}
+        imageAlt="jason"
+        userName="Jason Agus"
+        userRole="Maintainer"
+        userGithub="https://github.com/GuyWhoCode"
+        userLinkedin="https://www.linkedin.com/in/jason-agus-27808922b/"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={PatrickImage}
+        imageAlt="patrick"
+        userName="Patrick Hoang"
+        userRole="Maintainer"
+        userGithub="https://github.com/PattyCakesxD"
+        userLinkedin="https://www.linkedin.com/mwlite/in/patrick-hoang-432694252"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={MatthewImage}
+        imageAlt="matthew"
+        userName="Matthew Kwong"
+        userRole="Maintainer"
+        userGithub="https://github.com/Leaversa"
+        userLinkedin="https://www.linkedin.com/in/matthew--kwong/"
+      ></CreditElement>
       <Grid item xs={1}>
         {' '}
       </Grid>
@@ -145,18 +176,9 @@ function LeaderComponents(): ReactElement {
   );
 }
 
-function PrimaryDevComponents(): ReactElement {
+function DeveloperComponents(): ReactElement {
   return (
     <>
-      <CreditElement
-        imageLink={BillyBroncoImage}
-        imageAlt="jason"
-        userName="Jason Agus"
-        userRole="Primary Feature Dev"
-        userGithub="https://github.com/GuyWhoCode"
-        userLinkedin="https://www.linkedin.com/in/jason-agus-27808922b/"
-      ></CreditElement>
-
       <CreditElement
         imageLink={LinaImage}
         imageAlt="lina"
@@ -164,15 +186,6 @@ function PrimaryDevComponents(): ReactElement {
         userRole="Primary Feature Dev"
         userGithub="https://github.com/dal07065"
         userLinkedin="https://www.linkedin.com/in/linapoolmkang"
-      ></CreditElement>
-
-      <CreditElement
-        imageLink={MatthewImage}
-        imageAlt="matthew"
-        userName="Matthew Kwong"
-        userRole="Primary Feature Dev"
-        userGithub="https://github.com/Leaversa"
-        userLinkedin="https://www.linkedin.com/in/matthew--kwong/"
       ></CreditElement>
 
       <CreditElement
@@ -192,13 +205,6 @@ function PrimaryDevComponents(): ReactElement {
         userGithub="https://github.com/peppacaiou"
         userLinkedin="https://www.linkedin.com/in/tony-tong-699631240/"
       ></CreditElement>
-    </>
-  );
-}
-
-function SecondaryDevComponents(): ReactElement {
-  return (
-    <>
       <CreditElement
         imageLink={BillyBroncoImage}
         imageAlt="darren"
@@ -215,15 +221,6 @@ function SecondaryDevComponents(): ReactElement {
         userRole="Secondary Feature Dev"
         userGithub="https://github.com/wheatleyinabox"
         userLinkedin="https://www.linkedin.com/in/valeriedeleon-ca"
-      ></CreditElement>
-
-      <CreditElement
-        imageLink={PatrickImage}
-        imageAlt="patrick"
-        userName="Patrick Hoang"
-        userRole="Secondary Feature Dev"
-        userGithub="https://github.com/PattyCakesxD"
-        userLinkedin="https://www.linkedin.com/mwlite/in/patrick-hoang-432694252"
       ></CreditElement>
 
       <CreditElement
@@ -355,34 +352,34 @@ function MobileCredits(): ReactElement {
   return (
     <Box display={{ xs: 'block', md: 'none' }}>
       <AccordianElement
-        title="Leadership"
-        expand={expanded === 'Leadership'}
-        change={handleChange('Leadership')}
-        children={<LeaderComponents />}
+        title="Maintainers"
+        children={<MaintainerComponent />}
+        expand={expanded}
+        change={handleChange('Maintainers')}
       />
       <AccordianElement
-        title="Main Feature Devs"
-        children={<PrimaryDevComponents />}
-        expand={expanded === 'Main Feature Devs'}
-        change={handleChange('Main Feature Devs')}
+        title="Developers"
+        children={<DeveloperComponents />}
+        expand={expanded}
+        change={handleChange('Developers')}
       />
       <AccordianElement
-        title="Secondary Feature Devs"
-        children={<SecondaryDevComponents />}
-        expand={expanded === 'Secondary Feature Devs'}
-        change={handleChange('Secondary Feature Devs')}
-      />
-      <AccordianElement
-        title="Quality Engineers"
-        children={<QualityEngineerComponents />}
-        expand={expanded === 'Quality Engineers'}
-        change={handleChange('Quality Engineers')}
+        title="Mentors"
+        expand={expanded}
+        change={handleChange('Mentors')}
+        children={<MentorComponents />}
       />
       <AccordianElement
         title="Mentees"
         children={<MenteeComponents />}
-        expand={expanded === 'Mentees'}
+        expand={expanded}
         change={handleChange('Mentees')}
+      />
+      <AccordianElement
+        title="Quality Engineers"
+        children={<QualityEngineerComponents />}
+        expand={expanded}
+        change={handleChange('Quality Engineers')}
       />
     </Box>
   );
@@ -403,12 +400,14 @@ export default function Credits(): ReactElement {
         columns={{ xs: 5 }}
         sx={{ marginBottom: '5vh', paddingTop: '3vh' }}
       >
-        <LeaderComponents />
-        <PrimaryDevComponents />
-        <SecondaryDevComponents />
-        <QualityEngineerComponents />
+        <MaintainerComponent />
+        <DeveloperComponents />
+        <MentorComponents />
         <MenteeComponents />
+        <QualityEngineerComponents />
       </Grid>
+
+      {/* Mobile design */}
       <MobileCredits />
     </>
   );
