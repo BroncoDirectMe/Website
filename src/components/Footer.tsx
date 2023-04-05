@@ -45,9 +45,6 @@ export default function Footer(): ReactElement {
         <Link variant="h6" color="black" underline="none" href="./">
           Home
         </Link>
-        <Link variant="h6" color="black" underline="none" href="progress">
-          Progress
-        </Link>
         <Link
           target="_blank"
           rel="noopener"
