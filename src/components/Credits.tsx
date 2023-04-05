@@ -20,7 +20,15 @@ import PatrickImage from './images/patrick.jpg';
 import GithubImage from './images/github.png';
 import LinkedinImage from './images/linkedin.png';
 import BillyBroncoImage from './images/billybronco.png';
-import { Grid } from '@mui/material';
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Box,
+  Grid,
+  Typography,
+} from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 interface creditProps {
   imageLink: string;
@@ -31,6 +39,9 @@ interface creditProps {
   userLinkedin: string;
 }
 
+/**
+ * Component that displays a single developer credit element
+ */
 function CreditElement({
   imageLink = BillyBroncoImage,
   imageAlt,
@@ -40,11 +51,11 @@ function CreditElement({
   userLinkedin = 'https://www.linkedin.com/',
 }: creditProps): ReactElement {
   return (
-    <Grid item xs={1}>
+    <Grid item xs={1} style={{ height: '25vh' }}>
       <img
         src={imageLink}
         alt={imageAlt}
-        style={{ height: '30%', borderRadius: '50%' }}
+        style={{ height: '15vh', borderRadius: '5em' }}
       />
       <h2>{userName}</h2>
       <h3>{userRole}</h3>
@@ -52,19 +63,47 @@ function CreditElement({
         <img
           src={GithubImage}
           alt="git"
-          style={{ height: '5%', borderRadius: '50%' }}
+          style={{ height: '4vh', borderRadius: '50%' }}
         />
       </a>
       <a href={userLinkedin} target="_blank" rel="noreferrer">
         <img
           src={LinkedinImage}
           alt="link"
-          style={{ height: '5%', borderRadius: '50%' }}
+          style={{ height: '4vh', borderRadius: '50%' }}
         />
       </a>
     </Grid>
   );
 }
+
+/**
+ * Template accordion child element
+ * @param title Title of accordion
+ * @param children Accordion children
+ * @returns MUI accordion element
+ */
+function AccordianElement({
+  title,
+  expand,
+  change,
+  children,
+}: {
+  title: string;
+  expand: boolean;
+  change: (event: React.SyntheticEvent, isExpanded: boolean) => void;
+  children: ReactElement;
+}): ReactElement {
+  return (
+    <Accordion expanded={expand} onChange={change}>
+      <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+        <Typography>{title}</Typography>
+      </AccordionSummary>
+      <AccordionDetails>{children}</AccordionDetails>
+    </Accordion>
+  );
+}
+
 function LeaderComponents(): ReactElement {
   return (
     <>
@@ -109,10 +148,6 @@ function LeaderComponents(): ReactElement {
 function PrimaryDevComponents(): ReactElement {
   return (
     <>
-      <Grid item xs={1}>
-        {' '}
-      </Grid>
-
       <CreditElement
         imageLink={BillyBroncoImage}
         imageAlt="jason"
@@ -157,10 +192,6 @@ function PrimaryDevComponents(): ReactElement {
         userGithub="https://github.com/peppacaiou"
         userLinkedin="https://www.linkedin.com/in/tony-tong-699631240/"
       ></CreditElement>
-
-      <Grid item xs={1}>
-        {' '}
-      </Grid>
     </>
   );
 }
@@ -168,10 +199,6 @@ function PrimaryDevComponents(): ReactElement {
 function SecondaryDevComponents(): ReactElement {
   return (
     <>
-      <Grid item xs={1}>
-        {' '}
-      </Grid>
-
       <CreditElement
         imageLink={BillyBroncoImage}
         imageAlt="darren"
@@ -243,10 +270,6 @@ function SecondaryDevComponents(): ReactElement {
         userGithub="https://github.com/Samanyu24X"
         userLinkedin="https://www.linkedin.com/in/samanyu-satheesh"
       ></CreditElement>
-
-      <Grid item xs={1}>
-        {' '}
-      </Grid>
     </>
   );
 }
@@ -254,10 +277,6 @@ function SecondaryDevComponents(): ReactElement {
 function QualityEngineerComponents(): ReactElement {
   return (
     <>
-      <Grid item xs={1}>
-        {' '}
-      </Grid>
-
       <CreditElement
         imageLink={ElenaImage}
         imageAlt="elena"
@@ -284,10 +303,6 @@ function QualityEngineerComponents(): ReactElement {
         userGithub=""
         userLinkedin=""
       ></CreditElement>
-
-      <Grid item xs={1}>
-        {' '}
-      </Grid>
     </>
   );
 }
@@ -295,10 +310,6 @@ function QualityEngineerComponents(): ReactElement {
 function MenteeComponents(): ReactElement {
   return (
     <>
-      <Grid item xs={1}>
-        {' '}
-      </Grid>
-
       <CreditElement
         imageLink={MarcImage}
         imageAlt="marc"
@@ -321,39 +332,84 @@ function MenteeComponents(): ReactElement {
         imageLink={DevinImage}
         imageAlt="devin"
         userName="Devin Khun"
-        userRole="Product Mentee & Project Mentee"
+        userRole="Product & Project Mentee"
         userGithub="https://github.com/Shadowowl888"
         userLinkedin="https://www.linkedin.com/in/matthew-plascencia/"
       ></CreditElement>
-
-      <Grid item xs={1}>
-        {' '}
-      </Grid>
     </>
   );
 }
 
-function Credits(): ReactElement {
-  return (
-    <Grid
-      container
-      spacing={{ xs: 2, sm: 2, md: 3 }}
-      columns={{ xs: 5, sm: 5, md: 5 }}
-    >
-      <Grid item xs={1}>
-        {' '}
-      </Grid>
-      <LeaderComponents />
-      <PrimaryDevComponents />
-      <SecondaryDevComponents />
-      <QualityEngineerComponents />
-      <MenteeComponents />
+/**
+ * Mobile Credits Component
+ * @returns Container for mobile credits
+ */
+function MobileCredits(): ReactElement {
+  const [expanded, setExpanded] = React.useState<string | false>(false);
 
-      <Grid item xs={1}>
-        {' '}
-      </Grid>
-    </Grid>
+  const handleChange =
+    (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+      setExpanded(isExpanded ? panel : false);
+    };
+
+  return (
+    <Box display={{ xs: 'block', md: 'none' }}>
+      <AccordianElement
+        title="Leadership"
+        expand={expanded === 'Leadership'}
+        change={handleChange('Leadership')}
+        children={<LeaderComponents />}
+      />
+      <AccordianElement
+        title="Main Feature Devs"
+        children={<PrimaryDevComponents />}
+        expand={expanded === 'Main Feature Devs'}
+        change={handleChange('Main Feature Devs')}
+      />
+      <AccordianElement
+        title="Secondary Feature Devs"
+        children={<SecondaryDevComponents />}
+        expand={expanded === 'Secondary Feature Devs'}
+        change={handleChange('Secondary Feature Devs')}
+      />
+      <AccordianElement
+        title="Quality Engineers"
+        children={<QualityEngineerComponents />}
+        expand={expanded === 'Quality Engineers'}
+        change={handleChange('Quality Engineers')}
+      />
+      <AccordianElement
+        title="Mentees"
+        children={<MenteeComponents />}
+        expand={expanded === 'Mentees'}
+        change={handleChange('Mentees')}
+      />
+    </Box>
   );
 }
 
-export default Credits;
+/**
+ * Website Credits Component
+ * @returns Container with credits components
+ */
+export default function Credits(): ReactElement {
+  return (
+    <>
+      {/* Desktop design */}
+      <Grid
+        container
+        display={{ xs: 'none', md: 'flex' }}
+        spacing={{ xs: 2 }}
+        columns={{ xs: 5 }}
+        sx={{ marginBottom: '5vh', paddingTop: '3vh' }}
+      >
+        <LeaderComponents />
+        <PrimaryDevComponents />
+        <SecondaryDevComponents />
+        <QualityEngineerComponents />
+        <MenteeComponents />
+      </Grid>
+      <MobileCredits />
+    </>
+  );
+}
