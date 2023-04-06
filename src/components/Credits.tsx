@@ -97,11 +97,17 @@ function AccordianElement({
   children: ReactElement;
 }): ReactElement {
   return (
-    <Accordion expanded={expand === title} onChange={change}>
+    <Accordion
+      expanded={expand === title}
+      onChange={change}
+      sx={{ backgroundColor: '#a7a4a0' }}
+    >
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <Typography>{title}</Typography>
       </AccordionSummary>
-      <AccordionDetails>{children}</AccordionDetails>
+      <AccordionDetails sx={{ backgroundColor: 'white' }}>
+        {children}
+      </AccordionDetails>
     </Accordion>
   );
 }
@@ -368,15 +374,15 @@ function MobileCredits(): ReactElement {
       />
       <AccordianElement
         title="Mentors"
+        children={<MentorComponents />}
         expand={expanded}
         change={handleChange('Mentors')}
-        children={<MentorComponents />}
       />
       <AccordianElement
         title="Mentees"
-        children={<MenteeComponents />}
-        expand={expanded}
         change={handleChange('Mentees')}
+        expand={expanded}
+        children={<MenteeComponents />}
       />
       <AccordianElement
         title="Quality Engineers"
@@ -401,7 +407,11 @@ export default function Credits(): ReactElement {
         display={{ xs: 'none', md: 'flex' }}
         spacing={{ xs: 2 }}
         columns={{ xs: 5 }}
-        sx={{ marginBottom: '5vh', paddingTop: '3vh' }}
+        sx={{
+          paddingBottom: '1%',
+          backgroundColor: '#55a072',
+          marginTop: '0px!important',
+        }}
       >
         <MaintainerComponent />
         <DeveloperComponents />
