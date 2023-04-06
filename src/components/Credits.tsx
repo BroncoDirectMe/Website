@@ -20,668 +20,408 @@ import PatrickImage from './images/patrick.jpg';
 import GithubImage from './images/github.png';
 import LinkedinImage from './images/linkedin.png';
 import BillyBroncoImage from './images/billybronco.png';
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Box,
+  Grid,
+  Typography,
+} from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-function Credits(): ReactElement {
+interface creditProps {
+  imageLink: string;
+  imageAlt: string;
+  userName: string;
+  userRole: string;
+  userGithub: string;
+  userLinkedin: string;
+}
+
+/**
+ * Component that displays a single developer credit element
+ */
+function CreditElement({
+  imageLink = BillyBroncoImage,
+  imageAlt,
+  userName,
+  userRole,
+  userGithub = 'https://github.com/',
+  userLinkedin = 'https://www.linkedin.com/',
+}: creditProps): ReactElement {
+  return (
+    <Grid item xs={1} style={{ height: '25vh', marginBottom: '1.5%' }}>
+      <img
+        src={imageLink}
+        alt={imageAlt}
+        style={{ height: '15vh', borderRadius: '10vh' }}
+      />
+      <h2>{userName}</h2>
+      <h3>{userRole}</h3>
+      <a href={userGithub} target="_blank" rel="noreferrer">
+        <img
+          src={GithubImage}
+          alt="git"
+          style={{ height: '4vh', borderRadius: '50%' }}
+        />
+      </a>
+      <a href={userLinkedin} target="_blank" rel="noreferrer">
+        <img
+          src={LinkedinImage}
+          alt="link"
+          style={{ height: '4vh', borderRadius: '50%' }}
+        />
+      </a>
+    </Grid>
+  );
+}
+
+/**
+ * Template accordion child element
+ * @param title Title of accordion
+ * @parem expand Expand state of accordion
+ * @param change Function to close other open accordions
+ * @param children Accordion children
+ * @returns MUI accordion element
+ */
+function AccordianElement({
+  title,
+  expand,
+  change,
+  children,
+}: {
+  title: string;
+  expand: string | boolean;
+  change: (event: React.SyntheticEvent, isExpanded: boolean) => void;
+  children: ReactElement;
+}): ReactElement {
+  return (
+    <Accordion
+      expanded={expand === title}
+      onChange={change}
+      sx={{ backgroundColor: '#a7a4a0' }}
+    >
+      <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+        <Typography>{title}</Typography>
+      </AccordionSummary>
+      <AccordionDetails sx={{ backgroundColor: 'white' }}>
+        {children}
+      </AccordionDetails>
+    </Accordion>
+  );
+}
+
+function MentorComponents(): ReactElement {
   return (
     <>
-      <div className="grid-container">
-        <div className="grid-item"> </div>
+      <CreditElement
+        imageLink={LucianoImage}
+        imageAlt="luciano"
+        userName="Luciano Lim"
+        userRole="Tech Lead"
+        userGithub="https://github.com/ZombiMigz"
+        userLinkedin="https://www.linkedin.com/in/lucianolim"
+      ></CreditElement>
 
-        <div className="grid-item">
-          {' '}
-          <img
-            src={LucianoImage}
-            alt="luciano"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Luciano Lim</h2>
-          <h3>Tech Lead</h3>
-          <a
-            href="https://github.com/ZombiMigz"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/lucianolim"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={LinkedinImage}
-              alt="link"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          {' '}
-          <img
-            src={BobImage}
-            alt="bob"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Bob</h2>
-          <h3>Project Manager</h3>
-          <a
-            href="https://github.com/misslame"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <img
-            src={LinkedinImage}
-            alt="link"
-            style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-          />
-        </div>
+      <CreditElement
+        imageLink={BobImage}
+        imageAlt="bob"
+        userName="Bob"
+        userRole="Project Manager"
+        userGithub="https://github.com/misslame"
+        userLinkedin=""
+      ></CreditElement>
 
-        <div className="grid-item">
-          {' '}
-          <img
-            src={ProductBobImage}
-            alt="productbob"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Jacob Rothman</h2>
-          <h3>Product Manager</h3>
-          <a href="https://github.com/U-k-t" target="_blank" rel="noreferrer">
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/jacob-rothman/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={LinkedinImage}
-              alt="link"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-        </div>
-        <div className="grid-item"> </div>
-        <div className="grid-item">
-          {' '}
-          <img
-            src={BillyBroncoImage}
-            alt="jason"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Jason Agus</h2>
-          <h3>Primary Feature Dev</h3>
-          <a
-            href="https://github.com/GuyWhoCode"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/jason-agus-27808922b/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={LinkedinImage}
-              alt="link"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          {' '}
-          <img
-            src={LinaImage}
-            alt="lina"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Lina Kang</h2>
-          <h3>Primary Feature Dev</h3>
-          <a
-            href="https://github.com/dal07065"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/linapoolmkang"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={LinkedinImage}
-              alt="link"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          {' '}
-          <img
-            src={MatthewImage}
-            alt="matthew"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Matthew Kwong</h2>
-          <h3>Primary Feature Dev</h3>
-          <a
-            href="https://github.com/Leaversa"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/matthew--kwong/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={LinkedinImage}
-              alt="link"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          {' '}
-          <img
-            src={AliImage}
-            alt="ali"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Ali Momennasab</h2>
-          <h3>Primary Feature Dev</h3>
-          <a
-            href="https://github.com/alimomennasab"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/amomennasab/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={LinkedinImage}
-              alt="link"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          {' '}
-          <img
-            src={BillyBroncoImage}
-            alt="tony"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Tony Tong</h2>
-          <h3>Primary Feature Dev</h3>
-          <a
-            href="https://github.com/peppacaiou"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/tony-tong-699631240/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={LinkedinImage}
-              alt="link"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          {' '}
-          <img
-            src={BillyBroncoImage}
-            alt="darren"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Darren Banhthai</h2>
-          <h3>Secondary Feature Dev</h3>
-          <a
-            href="https://github.com/DarrenBT"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/darren-banhthai-6731a5221"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={LinkedinImage}
-              alt="link"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          {' '}
-          <img
-            src={ValImage}
-            alt="val"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Valen DeLeon</h2>
-          <h3>Secondary Feature Dev</h3>
-          <a
-            href="https://github.com/wheatleyinabox"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/valeriedeleon-ca"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={LinkedinImage}
-              alt="link"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          {' '}
-          <img
-            src={PatrickImage}
-            alt="patrick"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Patrick Hoang</h2>
-          <h3>Secondary Feature Dev</h3>
-          <a
-            href="https://github.com/PattyCakesxD"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/mwlite/in/patrick-hoang-432694252"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={LinkedinImage}
-              alt="link"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-        </div>
-
-        <div className="grid-item">
-          {' '}
-          <img
-            src={TimothyImage}
-            alt="tim"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Timothy Lee</h2>
-          <h3>Secondary Feature Dev</h3>
-          <a href="https://github.com/t1mato" target="_blank" rel="noreferrer">
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <a href="www.linkedin.com/in/tnlee1" target="_blank" rel="noreferrer">
-            <img
-              src={LinkedinImage}
-              alt="link"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          {' '}
-          <img
-            src={JaronImage}
-            alt="jaron"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Jaron Lin</h2>
-          <h3>Secondary Feature Dev</h3>
-          <a href="https://github.com/jaroonl" target="_blank" rel="noreferrer">
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/jaron-lin-540a76215/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={LinkedinImage}
-              alt="link"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          {' '}
-          <img
-            src={JonahImage}
-            alt="jonah"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Jonah Lynse</h2>
-          <h3>Secondary Feature Dev</h3>
-          <a href="https://github.com/drjonah" target="_blank" rel="noreferrer">
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/jonah-lysne/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={LinkedinImage}
-              alt="link"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          {' '}
-          <img
-            src={AlanImage}
-            alt="alan"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Alan Mong</h2>
-          <h3>Secondary Feature Dev</h3>
-          <a href="https://github.com/alinz22" target="_blank" rel="noreferrer">
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/alan-mong-46427b250/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={LinkedinImage}
-              alt="link"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          {' '}
-          <img
-            src={SamanyuImage}
-            alt="samanyu"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Samanyu Satheesh</h2>
-          <h3>Secondary Feature Dev</h3>
-          <a
-            href="https://github.com/Samanyu24X"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/samanyu-satheesh"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={LinkedinImage}
-              alt="link"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          {' '}
-          <img
-            src={ElenaImage}
-            alt="elena"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Elena Hernandez</h2>
-          <h3>Quality Engineer</h3>
-          <a href="https://github.com/E-A-H62" target="_blank" rel="noreferrer">
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/elena-hernandez-053371248"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={LinkedinImage}
-              alt="link"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          {' '}
-          <img
-            src={AlexanderImage}
-            alt="alex"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Alexander Okonkwo</h2>
-          <h3>Quality Engineer</h3>
-          <a href="https://github.com/owwix" target="_blank" rel="noreferrer">
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <img
-            src={LinkedinImage}
-            alt="link"
-            style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-          />
-        </div>
-        <div className="grid-item">
-          {' '}
-          <img
-            src={BillyBroncoImage}
-            alt="nick"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Nick</h2>
-          <h3>Quality Engineer</h3>
-          <img
-            src={GithubImage}
-            alt="git"
-            style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-          />
-          <img
-            src={LinkedinImage}
-            alt="link"
-            style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-          />
-        </div>
-        <div className="grid-item">
-          {' '}
-          <img
-            src={MarcImage}
-            alt="marc"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Marc Cruz</h2>
-          <h3>Product Mentee</h3>
-          <a
-            href="https://github.com/MarcCruzs"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/marc-cruz13/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={LinkedinImage}
-              alt="link"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-        </div>
-
-        <div className="grid-item">
-          {' '}
-          <img
-            src={MatthewPImage}
-            alt="matthew"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Matthew Plascencia</h2>
-          <h3>Product Mentee</h3>
-          <a
-            href="https://github.com/tapatiohaxx"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/matthew-plascencia/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={LinkedinImage}
-              alt="link"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          {' '}
-          <img
-            src={DevinImage}
-            alt="devin"
-            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
-          />
-          <h2>Devin Khun</h2>
-          <h3>Product Mentee & Project Mentee</h3>
-          <a
-            href="https://github.com/Shadowowl888"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={GithubImage}
-              alt="git"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/devin-khun/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={LinkedinImage}
-              alt="link"
-              style={{ width: '30px', height: '30px', borderRadius: '50%' }}
-            />
-          </a>
-        </div>
-      </div>
+      <CreditElement
+        imageLink={ProductBobImage}
+        imageAlt="productbob"
+        userName="Jacob Rothman"
+        userRole="Product Manager"
+        userGithub="https://github.com/U-k-t"
+        userLinkedin="https://www.linkedin.com/in/jacob-rothman/"
+      ></CreditElement>
     </>
   );
 }
 
-export default Credits;
+function MaintainerComponent(): ReactElement {
+  return (
+    <>
+      <Grid item xs={1}>
+        {' '}
+      </Grid>
+      <CreditElement
+        imageLink={BillyBroncoImage}
+        imageAlt="jason"
+        userName="Jason Agus"
+        userRole="Maintainer, Developer"
+        userGithub="https://github.com/GuyWhoCode"
+        userLinkedin="https://www.linkedin.com/in/jason-agus-27808922b/"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={PatrickImage}
+        imageAlt="patrick"
+        userName="Patrick Hoang"
+        userRole="Maintainer, Developer"
+        userGithub="https://github.com/PattyCakesxD"
+        userLinkedin="https://www.linkedin.com/mwlite/in/patrick-hoang-432694252"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={MatthewImage}
+        imageAlt="matthew"
+        userName="Matthew Kwong"
+        userRole="Maintainer, Developer"
+        userGithub="https://github.com/Leaversa"
+        userLinkedin="https://www.linkedin.com/in/matthew--kwong/"
+      ></CreditElement>
+      <Grid item xs={1}>
+        {' '}
+      </Grid>
+    </>
+  );
+}
+
+function DeveloperComponents(): ReactElement {
+  return (
+    <>
+      <CreditElement
+        imageLink={AliImage}
+        imageAlt="ali"
+        userName="Ali Momennasab"
+        userRole="Developer"
+        userGithub="https://github.com/alimomennasab"
+        userLinkedin="https://www.linkedin.com/in/amomennasab/"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={ValImage}
+        imageAlt="val"
+        userName="Valen DeLeon"
+        userRole="Developer"
+        userGithub="https://github.com/wheatleyinabox"
+        userLinkedin="https://www.linkedin.com/in/valeriedeleon-ca"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={LinaImage}
+        imageAlt="lina"
+        userName="Lina Kang"
+        userRole="Legacy Developer"
+        userGithub="https://github.com/dal07065"
+        userLinkedin="https://www.linkedin.com/in/linapoolmkang"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={BillyBroncoImage}
+        imageAlt="tony"
+        userName="Tony Tong"
+        userRole="Legacy Developer"
+        userGithub="https://github.com/peppacaiou"
+        userLinkedin="https://www.linkedin.com/in/tony-tong-699631240/"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={TimothyImage}
+        imageAlt="tim"
+        userName="Timothy Lee"
+        userRole="Legacy Developer"
+        userGithub="https://github.com/t1mato"
+        userLinkedin="www.linkedin.com/in/tnlee1"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={JaronImage}
+        imageAlt="jaron"
+        userName="Jaron Lin"
+        userRole="Legacy Developer"
+        userGithub="https://github.com/jaroonl"
+        userLinkedin="https://www.linkedin.com/in/jaron-lin-540a76215/"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={JonahImage}
+        imageAlt="jonah"
+        userName="Jonah Lynse"
+        userRole="Legacy Developer"
+        userGithub="https://github.com/drjonah"
+        userLinkedin="https://www.linkedin.com/in/jonah-lysne/"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={AlanImage}
+        imageAlt="alan"
+        userName="Alan Mong"
+        userRole="Legacy Developer"
+        userGithub="https://github.com/alinz22"
+        userLinkedin="https://www.linkedin.com/in/alan-mong-46427b250/"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={SamanyuImage}
+        imageAlt="samanyu"
+        userName="Samanyu Satheesh"
+        userRole="Legacy Developer"
+        userGithub="https://github.com/Samanyu24X"
+        userLinkedin="https://www.linkedin.com/in/samanyu-satheesh"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={BillyBroncoImage}
+        imageAlt="darren"
+        userName="Darren Banhthai"
+        userRole="Contributor"
+        userGithub="https://github.com/DarrenBT"
+        userLinkedin="https://www.linkedin.com/in/darren-banhthai-6731a5221"
+      ></CreditElement>
+    </>
+  );
+}
+
+function QualityEngineerComponents(): ReactElement {
+  return (
+    <>
+      <CreditElement
+        imageLink={ElenaImage}
+        imageAlt="elena"
+        userName="Elena Hernandez"
+        userRole="Quality Engineer"
+        userGithub="https://github.com/E-A-H62"
+        userLinkedin="https://www.linkedin.com/in/elena-hernandez-053371248"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={AlexanderImage}
+        imageAlt="alex"
+        userName="Alexander Okonkwo"
+        userRole="Quality Engineer"
+        userGithub="https://github.com/owwix"
+        userLinkedin=""
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={BillyBroncoImage}
+        imageAlt="nick"
+        userName="Nick"
+        userRole="Quality Engineer"
+        userGithub=""
+        userLinkedin=""
+      ></CreditElement>
+    </>
+  );
+}
+
+function MenteeComponents(): ReactElement {
+  return (
+    <>
+      <CreditElement
+        imageLink={MarcImage}
+        imageAlt="marc"
+        userName="Marc Cruz"
+        userRole="Product Mentee"
+        userGithub="https://github.com/MarcCruzs"
+        userLinkedin="https://www.linkedin.com/in/marc-cruz13/"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={MatthewPImage}
+        imageAlt="matthew"
+        userName="Matthew Plascencia"
+        userRole="Product Mentee"
+        userGithub="https://github.com/tapatiohaxx"
+        userLinkedin="https://www.linkedin.com/in/matthew-plascencia/"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={DevinImage}
+        imageAlt="devin"
+        userName="Devin Khun"
+        userRole="Product & Project Mentee"
+        userGithub="https://github.com/Shadowowl888"
+        userLinkedin="https://www.linkedin.com/in/matthew-plascencia/"
+      ></CreditElement>
+    </>
+  );
+}
+
+/**
+ * Mobile Credits Component
+ * @returns Container for mobile credits
+ */
+function MobileCredits(): ReactElement {
+  const [expanded, setExpanded] = React.useState<string | false>(false);
+
+  const handleChange =
+    (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+      setExpanded(isExpanded ? panel : false);
+    };
+
+  return (
+    <Box display={{ xs: 'block', md: 'none' }}>
+      <AccordianElement
+        title="Maintainers"
+        children={<MaintainerComponent />}
+        expand={expanded}
+        change={handleChange('Maintainers')}
+      />
+      <AccordianElement
+        title="Developers"
+        children={<DeveloperComponents />}
+        expand={expanded}
+        change={handleChange('Developers')}
+      />
+      <AccordianElement
+        title="Mentors"
+        children={<MentorComponents />}
+        expand={expanded}
+        change={handleChange('Mentors')}
+      />
+      <AccordianElement
+        title="Mentees"
+        change={handleChange('Mentees')}
+        expand={expanded}
+        children={<MenteeComponents />}
+      />
+      <AccordianElement
+        title="Quality Engineers"
+        children={<QualityEngineerComponents />}
+        expand={expanded}
+        change={handleChange('Quality Engineers')}
+      />
+    </Box>
+  );
+}
+
+/**
+ * Website Credits Component
+ * @returns Container with credits components
+ */
+export default function Credits(): ReactElement {
+  return (
+    <>
+      {/* Desktop design */}
+      <Grid
+        container
+        display={{ xs: 'none', md: 'flex' }}
+        spacing={{ xs: 2 }}
+        columns={{ xs: 5 }}
+        sx={{
+          paddingBottom: '1%',
+          backgroundColor: '#55a072',
+          marginTop: '0px!important',
+        }}
+      >
+        <MaintainerComponent />
+        <DeveloperComponents />
+        <MentorComponents />
+        <MenteeComponents />
+        <QualityEngineerComponents />
+      </Grid>
+
+      {/* Mobile design */}
+      <MobileCredits />
+    </>
+  );
+}
