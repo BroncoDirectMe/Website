@@ -6,8 +6,7 @@ import home from './images/home.png';
 export const BannerContainer = styled(Box)(() => ({
   display: 'flex',
   justifyContent: 'center',
-  // width: '100%',
-  padding: '0px 0px 50px 0px',
+  // padding: '0px 0px 50px 0px',
   backgroundImage: `url(${home})`,
 }));
 
@@ -20,9 +19,6 @@ export const BannerImage = styled('img')(({ src, theme }) => ({
 export const BannerContent = styled(Box)(() => ({
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'start',
-  // padding: '40px 40px 20px 40px',
-  paddingLeft: '40px',
 
   // 'linear-gradient(to top, rgba(30,30,30,0), rgba(30,30,30,1))',
 }));
@@ -58,7 +54,7 @@ export const BannerButton = styled(Button)(({ theme }) => ({
   marginTop: '0.5em',
   height: '3em',
   width: '18em',
-  marginLeft: '40px',
+  // marginLeft: '40px',
   // startIcon: '{<DownloadIcon/>}',
   '&:hover': {
     backgroundColor: '#ffffff',

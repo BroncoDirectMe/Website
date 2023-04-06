@@ -18,7 +18,7 @@ import {
   BannerSubtitle,
   BannerTitle,
 } from './Banner';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Grid, Link, Typography } from '@mui/material';
 import {
   BodyContainer,
   BodyText,
@@ -34,20 +34,19 @@ export default function Home(): ReactElement {
     <Box>
       <BannerContainer>
         <Grid container spacing={2} alignItems="end">
-          <Grid item xs={6}>
-            <Container
+          <Grid item xs={12} md={6}>
+            <Container 
               sx={{
                 display: 'flex',
-                alignItems: 'start',
-                justifyContent: 'start',
                 flexDirection: 'column',
                 padding: '30px 0px 40px 0px',
                 margin: '100px 50px 50px 0px',
+                alignItems: {xs:'center', md: 'start'},
                 height: '100%',
                 background: 'rgba(30,30,30,0.8)',
               }}
             >
-              <BannerContent>
+              <BannerContent alignItems={{xs: 'center', md:'start'}}>
                 <BannerTitle variant="h2">BRONCO DIRECT ME</BannerTitle>
                 <BannerDescription variant="h5">
                   Don't waste time registering
@@ -59,12 +58,19 @@ export default function Home(): ReactElement {
                   ENHANCING AND IMPROVING THE CPP REGISTRATION EXPERIENCE
                 </BannerSubtitle>
               </BannerContent>
-              <BannerButton variant="contained" startIcon={<DownloadIcon />}>
-                Download Extension
-              </BannerButton>
+              <Link
+                href="https://chrome.google.com/webstore/detail/broncodirectme/kcbdmdlehcmkgknmmfjjiaclhpplibda"
+                target="_blank"
+                rel="noopener"
+                underline="none"
+              >
+                <BannerButton variant="contained" startIcon={<DownloadIcon />}>
+                  Download Extension
+                </BannerButton>
+              </Link>
             </Container>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={0} md={6}sx={{display: {xs: 'none', md: "block"}}}>
             <BannerImage src={bronco}></BannerImage>
           </Grid>
         </Grid>
@@ -250,26 +256,28 @@ export default function Home(): ReactElement {
         >
           <Grid
             container
-            // p={3}
-            rowSpacing={10}
+            // rowSpacing={10}
             sx={{
-              marginTop: '0px',
-              paddingBottom: '4em',
+              display: 'flex',
+              flexDirection: {xs:'column', md:'row'},
+              alignItems: 'center',
+              padding: '50px'
             }}
           >
             <Grid
               item
-              xs={6}
+              xs={5}
               sx={{
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
+                // margin: '20px'
               }}
             >
               <GridItem>
                 <iframe
                   src="https://streamable.com/e/55ydlk"
-                  frameBorder="0"
+                  
                   width="100%"
                   height="100%"
                 ></iframe>
@@ -285,19 +293,22 @@ export default function Home(): ReactElement {
                 </GridText>
               </GridItem>
             </Grid>
+            <Grid item xs={2} minWidth='20px' minHeight='20px'>
+            </Grid>
             <Grid
               item
-              xs={6}
+              xs={5}
               sx={{
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
+                // margin: '20px'
               }}
             >
               <GridItem>
                 <iframe
                   src="https://streamable.com/e/sc05gd"
-                  frameBorder="0"
+                  
                   width="100%"
                   height="60%"
                 ></iframe>
@@ -317,9 +328,16 @@ export default function Home(): ReactElement {
         </Box>
 
         <FooterText variant="h4">Pretty Handy Ain't It?</FooterText>
-        <BannerButton variant="contained" startIcon={<DownloadIcon />}>
-          Download Extension
-        </BannerButton>
+        <Link
+          href="https://chrome.google.com/webstore/detail/broncodirectme/kcbdmdlehcmkgknmmfjjiaclhpplibda"
+          target="_blank"
+          rel="noopener"
+          underline="none"
+        >
+          <BannerButton variant="contained" startIcon={<DownloadIcon />}>
+            Download Extension
+          </BannerButton>
+        </Link>
         <Footer variant="h6">
           Developed by the students of California State Polytechnic University,
           Pomona

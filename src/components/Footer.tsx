@@ -39,17 +39,23 @@ export default function Footer(): ReactElement {
               }}
             />
           </>
-        // Two different divider elements to account for the change in footer orientation from horizontal to vertical
+          // Two different divider elements to account for the change in footer orientation from horizontal to vertical
         }
       >
-        <Link variant="h6" color="black" underline="none" href="/">
+        <Link variant="h6" color="black" underline="none" href="./">
           Home
         </Link>
         <Link variant="h6" color="black" underline="none" href="progress">
           Progress
         </Link>
-        {/* Add download link here later */}
-        <Link variant="h6" color="black" underline="none" href="/">
+        <Link
+          target="_blank"
+          rel="noopener"
+          variant="h6"
+          color="black"
+          underline="none"
+          href="https://chrome.google.com/webstore/detail/broncodirectme/kcbdmdlehcmkgknmmfjjiaclhpplibda"
+        >
           Download
         </Link>
         <Link variant="h6" color="black" underline="none" href="documentation">
