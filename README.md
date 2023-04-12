@@ -8,18 +8,8 @@ Students can search up professors and see what their rating is as well as what c
 1. [Go to our extension page on the Chrome Webstore.](https://chrome.google.com/webstore/detail/broncodirectme/kcbdmdlehcmkgknmmfjjiaclhpplibda)
 2. Click on "**Add to Chrome**" and enjoy the features our extension offers!
 
-
-## Screenshots
-### Extension Window
-![Sun Rating Example](https://i.imgur.com/ik3VMDL.png)
-![Gershman Rating Example](https://i.imgur.com/5OYyua0.png)
-### BroncoDirect Window
-![BroncoDirect Example](https://i.imgur.com/KbT3PNi.png)
-
 ## Reporting Bugs
 If you find a bug, please report it using [this Google Form!](https://forms.gle/kggDdg8t5dcVV2w17)
-
-
 
 ## Credits and Acknowledgement
 [Big Thanks to all the people who made this possible!](https://broncodirectme.github.io/Website/credits)
