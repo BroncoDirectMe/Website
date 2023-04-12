@@ -5,17 +5,24 @@ BroncoDirectMe is an extension for Chrome and other Chromium-based browsers that
 Students can search up professors and see what their rating is as well as what classes they are teaching. This is done with information from RateMyProfessor.com. 
 
 ## Setup Process
-1. Go to our extension page on the Chrome Webstore.
-2. Download and enjoy the features our extension offers.
+1. [Go to our extension page on the Chrome Webstore.](https://chrome.google.com/webstore/detail/broncodirectme/kcbdmdlehcmkgknmmfjjiaclhpplibda)
+2. Click on "**Add to Chrome**" and enjoy the features our extension offers!
 
 
 ## Screenshots
+### Extension Window
+![Sun Rating Example](https://i.imgur.com/ik3VMDL.png)
+![Gershman Rating Example](https://i.imgur.com/5OYyua0.png)
+### BroncoDirect Window
+![BroncoDirect Example](https://i.imgur.com/KbT3PNi.png)
 
-## Known Bugs
-Currently there are no bugs.
+## Reporting Bugs
+If you find a bug, please report it using [this Google Form!](https://forms.gle/kggDdg8t5dcVV2w17)
+
+
 
 ## Credits and Acknowledgement
 [Big Thanks to all the people who made this possible!](https://broncodirectme.github.io/Website/credits)
 
 ## News and Updates
-BroncoDirectMe 1.0.0 will be released just in time for Fall registration.
+April 13, 2023 -- Official Release of BroncoDirectMe 1.0.0

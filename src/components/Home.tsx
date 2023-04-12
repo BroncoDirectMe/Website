@@ -1,6 +1,4 @@
 import React, { ReactElement } from 'react';
-// import { useMediaQuery } from '@mui/material';
-// import { useTheme } from '@mui/material/styles';
 import DownloadIcon from '@mui/icons-material/Download';
 import bronco from './images/BroncoDirectMeLogo2.png';
 import home from './images/homeBody.png';
@@ -29,24 +27,23 @@ import {
 } from './HomeBody';
 
 export default function Home(): ReactElement {
-  // const matches = useMediaQuery(theme.breakpoints.down('md'));
   return (
     <Box>
       <BannerContainer>
         <Grid container spacing={2} alignItems="end">
           <Grid item xs={12} md={6}>
-            <Container 
+            <Container
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
                 padding: '30px 0px 40px 0px',
                 margin: '100px 50px 50px 0px',
-                alignItems: {xs:'center', md: 'start'},
+                alignItems: { xs: 'center', md: 'start' },
                 height: '100%',
                 background: 'rgba(30,30,30,0.8)',
               }}
             >
-              <BannerContent alignItems={{xs: 'center', md:'start'}}>
+              <BannerContent alignItems={{ xs: 'center', md: 'start' }}>
                 <BannerTitle variant="h2">BRONCO DIRECT ME</BannerTitle>
                 <BannerDescription variant="h5">
                   Don't waste time registering
@@ -70,7 +67,12 @@ export default function Home(): ReactElement {
               </Link>
             </Container>
           </Grid>
-          <Grid item xs={0} md={6}sx={{display: {xs: 'none', md: "block"}}}>
+          <Grid
+            item
+            xs={0}
+            md={6}
+            sx={{ display: { xs: 'none', md: 'block' } }}
+          >
             <BannerImage src={bronco}></BannerImage>
           </Grid>
         </Grid>
@@ -256,30 +258,32 @@ export default function Home(): ReactElement {
         >
           <Grid
             container
-            // rowSpacing={10}
             sx={{
               display: 'flex',
-              flexDirection: {xs:'column', md:'row'},
+              flexDirection: { xs: 'column', sm: 'row' },
               alignItems: 'center',
-              padding: '50px'
+              padding: '50px',
             }}
           >
             <Grid
               item
-              xs={5}
+              xs={10}
+              sm={5}
               sx={{
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                // margin: '20px'
               }}
             >
               <GridItem>
                 <iframe
-                  src="https://streamable.com/e/55ydlk"
-                  
                   width="100%"
-                  height="100%"
+                  height="300vh"
+                  style={{ marginTop: '2.5vh' }}
+                  src="https://www.youtube.com/embed/lMJb6vhM2nQ"
+                  title="BroncoDirect Demonstration"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen={true}
                 ></iframe>
                 <BodyText
                   variant="h4"
@@ -293,24 +297,25 @@ export default function Home(): ReactElement {
                 </GridText>
               </GridItem>
             </Grid>
-            <Grid item xs={2} minWidth='20px' minHeight='20px'>
-            </Grid>
+            <Grid item xs={2} minWidth="20px" minHeight="20px"></Grid>
             <Grid
               item
-              xs={5}
+              xs={10}
+              sm={5}
               sx={{
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                // margin: '20px'
               }}
             >
               <GridItem>
                 <iframe
-                  src="https://streamable.com/e/sc05gd"
-                  
                   width="100%"
-                  height="60%"
+                  height="300vh"
+                  src="https://www.youtube.com/embed/x7fAnYdr9WY"
+                  title="Extension Window Demonstration"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen={true}
                 ></iframe>
                 <BodyText
                   variant="h4"
