@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Website/static/css/main.511a0068.css",
-    "main.js": "/Website/static/js/main.d351b5d9.js",
+    "main.js": "/Website/static/js/main.47733604.js",
     "static/media/lina.jpg": "/Website/static/media/lina.f75b6015f610e8e4be4d.jpg",
     "static/media/valen.jpg": "/Website/static/media/valen.dad4935112978038dee0.jpg",
     "static/media/BroncoDirectMeLogo2.png": "/Website/static/media/BroncoDirectMeLogo2.51bcb13668a27efe560d.png",
@@ -22,10 +22,10 @@
     "static/media/t1mato.jpg": "/Website/static/media/t1mato.dc9a9056fea795c68827.jpg",
     "index.html": "/Website/index.html",
     "main.511a0068.css.map": "/Website/static/css/main.511a0068.css.map",
-    "main.d351b5d9.js.map": "/Website/static/js/main.d351b5d9.js.map"
+    "main.47733604.js.map": "/Website/static/js/main.47733604.js.map"
   },
   "entrypoints": [
     "static/css/main.511a0068.css",
-    "static/js/main.d351b5d9.js"
+    "static/js/main.47733604.js"
   ]
 }
