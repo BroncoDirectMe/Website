@@ -20,6 +20,7 @@ import PatrickImage from './images/patrick.jpg';
 import GithubImage from './images/github.png';
 import LinkedinImage from './images/linkedin.png';
 import BillyBroncoImage from './images/billybronco.png';
+import RonaldImage from './images/ron.jpg';
 import {
   Accordion,
   AccordionDetails,
@@ -187,6 +188,15 @@ function MaintainerComponent(): ReactElement {
 function DeveloperComponents(): ReactElement {
   return (
     <>
+      <CreditElement
+        imageLink={RonaldImage}
+        imageAlt="ron"
+        userName="Ronald Lencevičius"
+        userRole="Supporter"
+        userGithub="https://github.com/392781/"
+        userLinkedin="https://linkedin.com/in/ronaldpl"
+      ></CreditElement>
+
       <CreditElement
         imageLink={AliImage}
         imageAlt="ali"
