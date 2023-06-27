@@ -6,12 +6,13 @@ import Documentation from './components/Documentation';
 import Credits from './components/Credits';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-const devBuild = true;
 
 function App(): ReactElement {
+  // if using custom domain set basename to '/' for custom
+  // if using github's domain set basename to '/<repo-name>'
   return (
     <div className="App">
-      <Router basename={devBuild ? '/' : '/Website'}>
+      <Router basename={'/'}>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
