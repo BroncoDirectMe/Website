@@ -280,7 +280,7 @@ export default function Home(): ReactElement {
                   width="100%"
                   height="300vh"
                   style={{ marginTop: '2.5vh' }}
-                  src="https://www.youtube.com/embed/lMJb6vhM2nQ"
+                  src="https://www.youtube.com/embed/90L-1dkwaMk?si=gbTLyFDcsQyJPhaX"
                   title="BroncoDirect Demonstration"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen={true}
