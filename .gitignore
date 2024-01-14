@@ -26,3 +26,4 @@ node_modules
 # IDE-based
 .idea
 .vscode
+pnpm-lock.yaml
