@@ -21,6 +21,8 @@ import LinkedinImage from './images/linkedin.png';
 import BillyBroncoImage from './images/billybronco.png';
 import RonaldImage from './images/ron.jpg';
 import JasonImage from './images/json.jpg';
+import ThanhImage from './images/thanh.jpeg';
+
 import {
   Accordion,
   AccordionDetails,
@@ -222,6 +224,15 @@ function DeveloperComponents(): ReactElement {
         userRole="Legacy Developer"
         userGithub="https://github.com/MinT-Napkin"
         userLinkedin="https://www.linkedin.com/in/minh-tran-b7031420b/"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={ThanhImage}
+        imageAlt="Thanh"
+        userName="Thanh Dang"
+        userRole="Legacy Developer"
+        userGithub="https://github.com/tdang2180"
+        userLinkedin="https://www.linkedin.com/in/thanhdang1"
       ></CreditElement>
 
       <CreditElement
