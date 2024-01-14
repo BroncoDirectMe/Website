@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react';
 import JaronImage from './images/jaroon.jpg';
-import AlexanderImage from './images/alexander.jpg';
 import AliImage from './images/ali.jpg';
 import AlanImage from './images/alan.png';
 import LinaImage from './images/lina.jpg';
@@ -21,6 +20,7 @@ import GithubImage from './images/github.png';
 import LinkedinImage from './images/linkedin.png';
 import BillyBroncoImage from './images/billybronco.png';
 import RonaldImage from './images/ron.jpg';
+import JasonImage from './images/json.jpg';
 import {
   Accordion,
   AccordionDetails,
@@ -153,12 +153,12 @@ function MaintainerComponent(): ReactElement {
         {' '}
       </Grid>
       <CreditElement
-        imageLink={BillyBroncoImage}
+        imageLink={JasonImage}
         imageAlt="jason"
         userName="Jason Agus"
         userRole="Maintainer, Developer"
         userGithub="https://github.com/GuyWhoCode"
-        userLinkedin="https://www.linkedin.com/in/jason-agus-27808922b/"
+        userLinkedin="https://www.linkedin.com/in/jason-agus/"
       ></CreditElement>
 
       <CreditElement
@@ -167,7 +167,7 @@ function MaintainerComponent(): ReactElement {
         userName="Patrick Hoang"
         userRole="Maintainer, Developer"
         userGithub="https://github.com/PattyCakesxD"
-        userLinkedin="https://www.linkedin.com/mwlite/in/patrick-hoang-432694252"
+        userLinkedin="https://www.linkedin.com/in/patrick-hoang-432694252/"
       ></CreditElement>
 
       <CreditElement
@@ -213,6 +213,15 @@ function DeveloperComponents(): ReactElement {
         userRole="Developer"
         userGithub="https://github.com/wheatleyinabox"
         userLinkedin="https://www.linkedin.com/in/valeriedeleon-ca"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={BillyBroncoImage}
+        imageAlt="MinT"
+        userName="Minh Tran"
+        userRole="Legacy Developer"
+        userGithub="https://github.com/MinT-Napkin"
+        userLinkedin="https://www.linkedin.com/in/minh-tran-b7031420b/"
       ></CreditElement>
 
       <CreditElement
@@ -303,7 +312,7 @@ function QualityEngineerComponents(): ReactElement {
       ></CreditElement>
 
       <CreditElement
-        imageLink={AlexanderImage}
+        imageLink={BillyBroncoImage}
         imageAlt="alex"
         userName="Alexander Okonkwo"
         userRole="Quality Engineer"
