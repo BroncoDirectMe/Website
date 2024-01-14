@@ -22,6 +22,7 @@ import BillyBroncoImage from './images/billybronco.png';
 import RonaldImage from './images/ron.jpg';
 import JasonImage from './images/json.jpg';
 import ThanhImage from './images/thanh.jpeg';
+import OmarImage from './images/omar.jpg';
 
 import {
   Accordion,
@@ -100,15 +101,11 @@ function AccordianElement({
   children: ReactElement;
 }): ReactElement {
   return (
-    <Accordion
-      expanded={expand === title}
-      onChange={change}
-      sx={{ backgroundColor: '#a7a4a0' }}
-    >
+    <Accordion expanded={expand === title} onChange={change}>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <Typography>{title}</Typography>
       </AccordionSummary>
-      <AccordionDetails sx={{ backgroundColor: 'white' }}>
+      <AccordionDetails sx={{ backgroundColor: '#55a072' }}>
         {children}
       </AccordionDetails>
     </Accordion>
@@ -200,10 +197,28 @@ function DeveloperComponents(): ReactElement {
       ></CreditElement>
 
       <CreditElement
+        imageLink={ThanhImage}
+        imageAlt="Thanh"
+        userName="Thanh Dang"
+        userRole="Maintainer, Legacy Developer"
+        userGithub="https://github.com/tdang2180"
+        userLinkedin="https://www.linkedin.com/in/thanhdang1"
+      ></CreditElement>
+
+      <CreditElement
+        imageLink={OmarImage}
+        imageAlt="Omar"
+        userName="Omar Jaber"
+        userRole="Maintainer, Legacy Developer"
+        userGithub="https://github.com/OJ101003"
+        userLinkedin="https://www.linkedin.com/in/omar-jaber-210645250/"
+      ></CreditElement>
+
+      <CreditElement
         imageLink={AliImage}
         imageAlt="ali"
         userName="Ali Momennasab"
-        userRole="Developer"
+        userRole="Legacy Developer"
         userGithub="https://github.com/alimomennasab"
         userLinkedin="https://www.linkedin.com/in/amomennasab/"
       ></CreditElement>
@@ -212,7 +227,7 @@ function DeveloperComponents(): ReactElement {
         imageLink={ValImage}
         imageAlt="val"
         userName="Valen DeLeon"
-        userRole="Developer"
+        userRole="Legacy Developer"
         userGithub="https://github.com/wheatleyinabox"
         userLinkedin="https://www.linkedin.com/in/valeriedeleon-ca"
       ></CreditElement>
@@ -224,15 +239,6 @@ function DeveloperComponents(): ReactElement {
         userRole="Legacy Developer"
         userGithub="https://github.com/MinT-Napkin"
         userLinkedin="https://www.linkedin.com/in/minh-tran-b7031420b/"
-      ></CreditElement>
-
-      <CreditElement
-        imageLink={ThanhImage}
-        imageAlt="Thanh"
-        userName="Thanh Dang"
-        userRole="Legacy Developer"
-        userGithub="https://github.com/tdang2180"
-        userLinkedin="https://www.linkedin.com/in/thanhdang1"
       ></CreditElement>
 
       <CreditElement
@@ -389,7 +395,10 @@ function MobileCredits(): ReactElement {
     };
 
   return (
-    <Box display={{ xs: 'block', md: 'none' }}>
+    <Box
+      display={{ xs: 'block', md: 'none' }}
+      sx={{ backgroundColor: '#55a072', fontWeight: '500' }}
+    >
       <AccordianElement
         title="Maintainers"
         children={<MaintainerComponent />}
@@ -441,6 +450,7 @@ export default function Credits(): ReactElement {
           paddingBottom: '1%',
           backgroundColor: '#55a072',
           marginTop: '0px!important',
+          fontWeight: '500'
         }}
       >
         <MaintainerComponent />
