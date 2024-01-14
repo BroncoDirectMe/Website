@@ -35,12 +35,12 @@ import {
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 interface creditProps {
-  imageLink: string;
+  imageLink?: string;
   imageAlt: string;
   userName: string;
   userRole: string;
-  userGithub: string;
-  userLinkedin: string;
+  userGithub?: string;
+  userLinkedin?: string;
 }
 
 /**
@@ -117,7 +117,7 @@ function MentorComponents(): ReactElement {
     <>
       <CreditElement
         imageLink={LucianoImage}
-        imageAlt="luciano"
+        imageAlt="Luciano"
         userName="Luciano Lim"
         userRole="Tech Lead"
         userGithub="https://github.com/ZombiMigz"
@@ -126,16 +126,15 @@ function MentorComponents(): ReactElement {
 
       <CreditElement
         imageLink={BobImage}
-        imageAlt="bob"
+        imageAlt="Bob"
         userName="Bob"
         userRole="Project Manager"
         userGithub="https://github.com/misslame"
-        userLinkedin=""
       ></CreditElement>
 
       <CreditElement
         imageLink={ProductBobImage}
-        imageAlt="productbob"
+        imageAlt="Productbob"
         userName="Jacob Rothman"
         userRole="Product Manager"
         userGithub="https://github.com/U-k-t"
@@ -153,7 +152,7 @@ function MaintainerComponent(): ReactElement {
       </Grid>
       <CreditElement
         imageLink={JasonImage}
-        imageAlt="jason"
+        imageAlt="Jason"
         userName="Jason Agus"
         userRole="Maintainer, Developer"
         userGithub="https://github.com/GuyWhoCode"
@@ -162,7 +161,7 @@ function MaintainerComponent(): ReactElement {
 
       <CreditElement
         imageLink={PatrickImage}
-        imageAlt="patrick"
+        imageAlt="Patrick"
         userName="Patrick Hoang"
         userRole="Maintainer, Developer"
         userGithub="https://github.com/PattyCakesxD"
@@ -171,7 +170,7 @@ function MaintainerComponent(): ReactElement {
 
       <CreditElement
         imageLink={MatthewImage}
-        imageAlt="matthew"
+        imageAlt="Matthew"
         userName="Matthew Kwong"
         userRole="Maintainer, Developer"
         userGithub="https://github.com/Leaversa"
@@ -189,7 +188,7 @@ function DeveloperComponents(): ReactElement {
     <>
       <CreditElement
         imageLink={RonaldImage}
-        imageAlt="ron"
+        imageAlt="Ron"
         userName="Ronald Lencevičius"
         userRole="Supporter"
         userGithub="https://github.com/392781/"
@@ -216,16 +215,16 @@ function DeveloperComponents(): ReactElement {
 
       <CreditElement
         imageLink={AliImage}
-        imageAlt="ali"
+        imageAlt="Ali"
         userName="Ali Momennasab"
-        userRole="Legacy Developer"
+        userRole="Maintainer, Legacy Developer"
         userGithub="https://github.com/alimomennasab"
         userLinkedin="https://www.linkedin.com/in/amomennasab/"
       ></CreditElement>
 
       <CreditElement
         imageLink={ValImage}
-        imageAlt="val"
+        imageAlt="Valen"
         userName="Valen DeLeon"
         userRole="Legacy Developer"
         userGithub="https://github.com/wheatleyinabox"
@@ -233,7 +232,6 @@ function DeveloperComponents(): ReactElement {
       ></CreditElement>
 
       <CreditElement
-        imageLink={BillyBroncoImage}
         imageAlt="MinT"
         userName="Minh Tran"
         userRole="Legacy Developer"
@@ -243,7 +241,7 @@ function DeveloperComponents(): ReactElement {
 
       <CreditElement
         imageLink={LinaImage}
-        imageAlt="lina"
+        imageAlt="Lina"
         userName="Lina Kang"
         userRole="Legacy Developer"
         userGithub="https://github.com/dal07065"
@@ -251,8 +249,7 @@ function DeveloperComponents(): ReactElement {
       ></CreditElement>
 
       <CreditElement
-        imageLink={BillyBroncoImage}
-        imageAlt="tony"
+        imageAlt="Tony"
         userName="Tony Tong"
         userRole="Legacy Developer"
         userGithub="https://github.com/peppacaiou"
@@ -261,7 +258,7 @@ function DeveloperComponents(): ReactElement {
 
       <CreditElement
         imageLink={TimothyImage}
-        imageAlt="tim"
+        imageAlt="Tim"
         userName="Timothy Lee"
         userRole="Legacy Developer"
         userGithub="https://github.com/t1mato"
@@ -270,7 +267,7 @@ function DeveloperComponents(): ReactElement {
 
       <CreditElement
         imageLink={JaronImage}
-        imageAlt="jaron"
+        imageAlt="Jaron"
         userName="Jaron Lin"
         userRole="Legacy Developer"
         userGithub="https://github.com/jaroonl"
@@ -279,7 +276,7 @@ function DeveloperComponents(): ReactElement {
 
       <CreditElement
         imageLink={JonahImage}
-        imageAlt="jonah"
+        imageAlt="Jonah"
         userName="Jonah Lynse"
         userRole="Legacy Developer"
         userGithub="https://github.com/drjonah"
@@ -288,7 +285,7 @@ function DeveloperComponents(): ReactElement {
 
       <CreditElement
         imageLink={AlanImage}
-        imageAlt="alan"
+        imageAlt="Alan"
         userName="Alan Mong"
         userRole="Legacy Developer"
         userGithub="https://github.com/alinz22"
@@ -297,7 +294,7 @@ function DeveloperComponents(): ReactElement {
 
       <CreditElement
         imageLink={SamanyuImage}
-        imageAlt="samanyu"
+        imageAlt="Samanyu"
         userName="Samanyu Satheesh"
         userRole="Legacy Developer"
         userGithub="https://github.com/Samanyu24X"
@@ -305,8 +302,7 @@ function DeveloperComponents(): ReactElement {
       ></CreditElement>
 
       <CreditElement
-        imageLink={BillyBroncoImage}
-        imageAlt="darren"
+        imageAlt="Darren"
         userName="Darren Banhthai"
         userRole="Contributor"
         userGithub="https://github.com/DarrenBT"
@@ -321,7 +317,7 @@ function QualityEngineerComponents(): ReactElement {
     <>
       <CreditElement
         imageLink={ElenaImage}
-        imageAlt="elena"
+        imageAlt="Elena"
         userName="Elena Hernandez"
         userRole="Quality Engineer"
         userGithub="https://github.com/E-A-H62"
@@ -329,21 +325,16 @@ function QualityEngineerComponents(): ReactElement {
       ></CreditElement>
 
       <CreditElement
-        imageLink={BillyBroncoImage}
-        imageAlt="alex"
+        imageAlt="Alex"
         userName="Alexander Okonkwo"
         userRole="Quality Engineer"
         userGithub="https://github.com/owwix"
-        userLinkedin=""
       ></CreditElement>
 
       <CreditElement
-        imageLink={BillyBroncoImage}
-        imageAlt="nick"
+        imageAlt="Nick"
         userName="Nick"
         userRole="Quality Engineer"
-        userGithub=""
-        userLinkedin=""
       ></CreditElement>
     </>
   );
@@ -354,7 +345,7 @@ function MenteeComponents(): ReactElement {
     <>
       <CreditElement
         imageLink={MarcImage}
-        imageAlt="marc"
+        imageAlt="Marc"
         userName="Marc Cruz"
         userRole="Product Mentee"
         userGithub="https://github.com/MarcCruzs"
@@ -363,7 +354,7 @@ function MenteeComponents(): ReactElement {
 
       <CreditElement
         imageLink={MatthewPImage}
-        imageAlt="matthew"
+        imageAlt="Matthew"
         userName="Matthew Plascencia"
         userRole="Product Mentee"
         userGithub="https://github.com/tapatiohaxx"
@@ -372,7 +363,7 @@ function MenteeComponents(): ReactElement {
 
       <CreditElement
         imageLink={DevinImage}
-        imageAlt="devin"
+        imageAlt="Devin"
         userName="Devin Khun"
         userRole="Product & Project Mentee"
         userGithub="https://github.com/Shadowowl888"
