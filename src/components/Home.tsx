@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import { type ReactElement } from 'react';
 import DownloadIcon from '@mui/icons-material/Download';
 import bronco from './images/BroncoDirectMeLogo2.png';
 import home from './images/homeBody.png';

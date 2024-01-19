@@ -1,6 +1,5 @@
 import { Box, Button, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import bronco from './images/thirstbronco.png';
 import home from './images/home.png';
 
 export const BannerContainer = styled(Box)(() => ({
@@ -11,7 +10,7 @@ export const BannerContainer = styled(Box)(() => ({
 }));
 
 export const BannerImage = styled('img')(({ src, theme }) => ({
-  src: { bronco },
+  src: { src },
   padding: '30px 60px 30px 20px',
   width: '80%',
 }));

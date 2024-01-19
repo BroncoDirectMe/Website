@@ -11,7 +11,7 @@ import {
   MenuItem,
 } from '@mui/material';
 import { School } from '@mui/icons-material';
-import { ReactElement, useState } from 'react';
+import { type ReactElement, useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 
 /**
@@ -20,8 +20,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 export default function Navbar(): ReactElement {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>): void =>
-    setAnchorElNav(event.currentTarget);
-  const handleCloseNavMenu = (): void => setAnchorElNav(null);
+    { setAnchorElNav(event.currentTarget); };
+  const handleCloseNavMenu = (): void => { setAnchorElNav(null); };
 
   return (
     <AppBar position="static" style={{ background: '#194719' }}>
