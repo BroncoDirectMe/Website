@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import { useState, type ReactElement } from 'react';
 import JaronImage from './images/jaroon.jpg';
 import AliImage from './images/ali.jpg';
 import AlanImage from './images/alan.png';
@@ -13,7 +13,6 @@ import TimothyImage from './images/t1mato.jpg';
 import MatthewPImage from './images/matthewp.jpg';
 import ValImage from './images/valen.jpg';
 import LucianoImage from './images/luciano.png';
-import DevinImage from './images/devin.jpg';
 import ElenaImage from './images/elena.png';
 import PatrickImage from './images/patrick.jpg';
 import GithubImage from './images/github.png';
@@ -361,14 +360,6 @@ function MenteeComponents(): ReactElement {
         userLinkedin="https://www.linkedin.com/in/matthew-plascencia/"
       ></CreditElement>
 
-      <CreditElement
-        imageLink={DevinImage}
-        imageAlt="Devin"
-        userName="Devin Khun"
-        userRole="Product & Project Mentee"
-        userGithub="https://github.com/Shadowowl888"
-        userLinkedin="https://www.linkedin.com/in/matthew-plascencia/"
-      ></CreditElement>
     </>
   );
 }
@@ -378,7 +369,7 @@ function MenteeComponents(): ReactElement {
  * @returns Container for mobile credits
  */
 function MobileCredits(): ReactElement {
-  const [expanded, setExpanded] = React.useState<string | false>(false);
+  const [expanded, setExpanded] = useState<string | false>(false);
 
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {

@@ -1,5 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-import React, { ReactElement, useEffect } from 'react';
+import { type ReactElement, useEffect } from 'react';
 import './Documentation.css';
 
 function Documentation(): ReactElement {
