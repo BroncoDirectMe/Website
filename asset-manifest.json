@@ -1,32 +1,34 @@
 {
   "files": {
-    "main.css": "/static/css/main.511a0068.css",
-    "main.js": "/static/js/main.a3e70a03.js",
+    "main.css": "/static/css/main.dddaff1b.css",
+    "main.js": "/static/js/main.92873f3c.js",
+    "static/media/omar.jpg": "/static/media/omar.fc946ae8133937e6b88d.jpg",
     "static/media/lina.jpg": "/static/media/lina.f75b6015f610e8e4be4d.jpg",
-    "static/media/valen.jpg": "/static/media/valen.dad4935112978038dee0.jpg",
+    "static/media/valen.jpg": "/static/media/valen.82b3cdc18601bfd0f049.jpg",
     "static/media/BroncoDirectMeLogo2.png": "/static/media/BroncoDirectMeLogo2.51bcb13668a27efe560d.png",
     "static/media/marccruz.jpg": "/static/media/marccruz.dcb45071436a899f462e.jpg",
     "static/media/homeBody.png": "/static/media/homeBody.6f55980d0845ef7e3bd5.png",
-    "static/media/samanyu.png": "/static/media/samanyu.619a7d6c31e0c8875543.png",
+    "static/media/thanh.jpeg": "/static/media/thanh.b5c38d0912c88f0446d2.jpeg",
+    "static/media/samanyu.png": "/static/media/samanyu.c6693cab14945d53da89.png",
     "static/media/home.png": "/static/media/home.f55afb5cebce25f865e9.png",
     "static/media/alan.png": "/static/media/alan.05606c03fd00fbe7fa1a.png",
     "static/media/patrick.jpg": "/static/media/patrick.cfc5d4394f30291e7671.jpg",
     "static/media/billybronco.png": "/static/media/billybronco.eb5b47a5b73a21f61f50.png",
     "static/media/elena.png": "/static/media/elena.3b2a8e4f5a2e35b5d8cd.png",
     "static/media/luciano.png": "/static/media/luciano.df6586e84ec961ea0567.png",
+    "static/media/json.jpg": "/static/media/json.93aa34673f528069b757.jpg",
     "static/media/jonah.jpg": "/static/media/jonah.c321ae906dda1cf47e6d.jpg",
     "static/media/ali.jpg": "/static/media/ali.1b29262dcb303fbde82f.jpg",
     "static/media/matthewp.jpg": "/static/media/matthewp.354b1eda8e839bd8cec9.jpg",
     "static/media/ron.jpg": "/static/media/ron.bd5882d983a7c3b0bc93.jpg",
-    "static/media/thirstbronco.png": "/static/media/thirstbronco.e5e3e8e36077f317d18c.png",
     "static/media/jaroon.jpg": "/static/media/jaroon.63f3ab52e11d3ef53508.jpg",
     "static/media/t1mato.jpg": "/static/media/t1mato.dc9a9056fea795c68827.jpg",
     "index.html": "/index.html",
-    "main.511a0068.css.map": "/static/css/main.511a0068.css.map",
-    "main.a3e70a03.js.map": "/static/js/main.a3e70a03.js.map"
+    "main.dddaff1b.css.map": "/static/css/main.dddaff1b.css.map",
+    "main.92873f3c.js.map": "/static/js/main.92873f3c.js.map"
   },
   "entrypoints": [
-    "static/css/main.511a0068.css",
-    "static/js/main.a3e70a03.js"
+    "static/css/main.dddaff1b.css",
+    "static/js/main.92873f3c.js"
   ]
 }
