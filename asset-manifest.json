@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.dddaff1b.css",
-    "main.js": "/static/js/main.92873f3c.js",
+    "main.js": "/static/js/main.b37d9afc.js",
     "static/media/omar.jpg": "/static/media/omar.fc946ae8133937e6b88d.jpg",
     "static/media/lina.jpg": "/static/media/lina.f75b6015f610e8e4be4d.jpg",
     "static/media/valen.jpg": "/static/media/valen.82b3cdc18601bfd0f049.jpg",
@@ -16,6 +16,7 @@
     "static/media/billybronco.png": "/static/media/billybronco.eb5b47a5b73a21f61f50.png",
     "static/media/elena.png": "/static/media/elena.3b2a8e4f5a2e35b5d8cd.png",
     "static/media/luciano.png": "/static/media/luciano.df6586e84ec961ea0567.png",
+    "static/media/tony.png": "/static/media/tony.266e15e8f6a57c9570a4.png",
     "static/media/json.jpg": "/static/media/json.93aa34673f528069b757.jpg",
     "static/media/jonah.jpg": "/static/media/jonah.c321ae906dda1cf47e6d.jpg",
     "static/media/ali.jpg": "/static/media/ali.1b29262dcb303fbde82f.jpg",
@@ -25,10 +26,10 @@
     "static/media/t1mato.jpg": "/static/media/t1mato.dc9a9056fea795c68827.jpg",
     "index.html": "/index.html",
     "main.dddaff1b.css.map": "/static/css/main.dddaff1b.css.map",
-    "main.92873f3c.js.map": "/static/js/main.92873f3c.js.map"
+    "main.b37d9afc.js.map": "/static/js/main.b37d9afc.js.map"
   },
   "entrypoints": [
     "static/css/main.dddaff1b.css",
-    "static/js/main.92873f3c.js"
+    "static/js/main.b37d9afc.js"
   ]
 }
