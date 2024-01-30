@@ -16,3 +16,5 @@ If you find a bug, please report it using [this Google Form!](https://forms.gle/
 
 ## News and Updates
 April 13, 2023 -- Official Release of BroncoDirectMe 1.0.0
+October 23, 2023 -- Added support for average GPA data from CPPScheduler
+February 2, 2024 -- Open Source Release!
