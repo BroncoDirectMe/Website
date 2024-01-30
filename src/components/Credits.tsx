@@ -22,6 +22,7 @@ import RonaldImage from './images/ron.jpg';
 import JasonImage from './images/json.jpg';
 import ThanhImage from './images/thanh.jpeg';
 import OmarImage from './images/omar.jpg';
+import TonyImage from './images/tony.png';
 
 import {
   Accordion,
@@ -248,6 +249,7 @@ function DeveloperComponents(): ReactElement {
       ></CreditElement>
 
       <CreditElement
+        imageLink={TonyImage}
         imageAlt="Tony"
         userName="Tony Tong"
         userRole="Legacy Developer"
