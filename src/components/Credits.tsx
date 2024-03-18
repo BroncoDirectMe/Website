@@ -1,4 +1,4 @@
-import { useState, type ReactElement } from 'react';
+import { useState, type ReactElement, useEffect } from 'react';
 import JaronImage from './images/jaroon.jpg';
 import AliImage from './images/ali.jpg';
 import AlanImage from './images/alan.png';
@@ -23,6 +23,7 @@ import JasonImage from './images/json.jpg';
 import ThanhImage from './images/thanh.jpeg';
 import OmarImage from './images/omar.jpg';
 import TonyImage from './images/tony.png';
+import './Credits.css';
 
 import {
   Accordion,
@@ -63,17 +64,17 @@ function CreditElement({
       />
       <h2>{userName}</h2>
       <h3>{userRole}</h3>
-      <a href={userGithub} target="_blank" rel="noreferrer">
+      <a href={userGithub} target="_blank" rel="noreferrer" className="profile-btn">
         <img
           src={GithubImage}
-          alt="git"
+          alt={`${userName}'s Github`}
           style={{ height: '4vh', borderRadius: '50%' }}
         />
       </a>
-      <a href={userLinkedin} target="_blank" rel="noreferrer">
+      <a href={userLinkedin} target="_blank" rel="noreferrer" className="profile-btn">
         <img
           src={LinkedinImage}
-          alt="link"
+          alt={`${userName}'s LinkedIn`}
           style={{ height: '4vh', borderRadius: '50%' }}
         />
       </a>
@@ -422,10 +423,15 @@ function MobileCredits(): ReactElement {
  * @returns Container with credits components
  */
 export default function Credits(): ReactElement {
+  useEffect(() => {
+    document.title = 'Credits - BroncoDirectMe';
+  });
+
   return (
     <>
       {/* Desktop design */}
       <Grid
+        id='main'
         container
         display={{ xs: 'none', md: 'flex' }}
         spacing={{ xs: 2 }}
