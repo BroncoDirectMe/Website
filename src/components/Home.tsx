@@ -29,7 +29,7 @@ import {
 export default function Home(): ReactElement {
   return (
     <Box>
-      <BannerContainer>
+      <BannerContainer id='main'>
         <Grid container spacing={2} alignItems="end">
           <Grid item xs={12} md={6}>
             <Container
@@ -73,7 +73,7 @@ export default function Home(): ReactElement {
             md={6}
             sx={{ display: { xs: 'none', md: 'block' } }}
           >
-            <BannerImage src={bronco}></BannerImage>
+            <BannerImage src={bronco} alt=''></BannerImage>
           </Grid>
         </Grid>
       </BannerContainer>
@@ -124,7 +124,7 @@ export default function Home(): ReactElement {
                     margin: '20px',
                     borderRadius: '150px',
                   }}
-                  alt="Completely Free"
+                  alt=''
                   src={icon1}
                 />
 
@@ -159,7 +159,7 @@ export default function Home(): ReactElement {
                     margin: '20px',
                     borderRadius: '150px',
                   }}
-                  alt="User Friendly"
+                  alt=''
                   src={icon2}
                 />
                 <Typography
@@ -193,7 +193,7 @@ export default function Home(): ReactElement {
                     margin: '20px',
                     borderRadius: '150px',
                   }}
-                  alt="Easy Installation"
+                  alt=''
                   src={icon3}
                 />
                 <Typography
@@ -228,7 +228,7 @@ export default function Home(): ReactElement {
                     margin: '20px',
                     borderRadius: '150px',
                   }}
-                  alt="Community"
+                  alt=''
                   src={icon4}
                 />
                 <Typography
@@ -281,10 +281,10 @@ export default function Home(): ReactElement {
                   height="300vh"
                   style={{ marginTop: '2.5vh' }}
                   src="https://www.youtube.com/embed/90L-1dkwaMk?si=gbTLyFDcsQyJPhaX"
-                  title="BroncoDirect Demonstration"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  title="Demonstration on the BroncoDirect website"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen={true}
-                ></iframe>
+                />
                 <BodyText
                   variant="h4"
                   sx={{ color: 'white', fontWeight: 'bold' }}
@@ -314,9 +314,9 @@ export default function Home(): ReactElement {
                   height="300vh"
                   src="https://www.youtube.com/embed/x7fAnYdr9WY"
                   title="Extension Window Demonstration"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen={true}
-                ></iframe>
+                />
                 <BodyText
                   variant="h4"
                   sx={{ color: 'white', fontWeight: 'bold' }}

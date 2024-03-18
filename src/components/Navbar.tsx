@@ -10,35 +10,29 @@ import {
   Container,
   MenuItem,
 } from '@mui/material';
-import { School } from '@mui/icons-material';
+import { Launch, School } from '@mui/icons-material';
 import { type ReactElement, useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
+import './Navbar.css';
 
 /**
  * Customized responsive navbar from https://mui.com/material-ui/react-app-bar/#app-bar-with-responsive-menu
  */
 export default function Navbar(): ReactElement {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>): void =>
-    { setAnchorElNav(event.currentTarget); };
+  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>): void => { setAnchorElNav(event.currentTarget); };
   const handleCloseNavMenu = (): void => { setAnchorElNav(null); };
 
   return (
     <AppBar position="static" style={{ background: '#194719' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="logo"
-            sx={{ display: { xs: 'none', md: 'flex' } }}
-          >
-            <School />
-          </IconButton>
+          <a href="#main" className="skip-link">Skip to main content</a>
+          <School sx={({ display: { xs: 'none', md: 'flex' } })} />
           <Typography
             variant="h5"
             component="div"
+            paddingLeft={1.5}
             paddingRight={5}
             paddingTop={0.5}
             sx={{ display: { xs: 'none', md: 'flex' } }}
@@ -94,27 +88,21 @@ export default function Navbar(): ReactElement {
                 target="_blank"
                 rel="noopener"
               >
-                <Typography color="inherit" textAlign="center">
+                <Typography color="inherit" textAlign="center" paddingRight={0.5}>
                   Download
                 </Typography>
+                <Launch />
               </MenuItem>
             </Menu>
           </Box>
           {/* MOBILE VIEW: Dropdown navbar menu */}
 
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="logo"
-            sx={{ display: { xs: 'flex', md: 'none' } }}
-          >
-            <School />
-          </IconButton>
+          <School sx={{ display: { xs: 'flex', md: 'none' } }} />
           <Typography
             variant="h5"
             noWrap
             component="div"
+            paddingLeft={1.5}
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -123,7 +111,7 @@ export default function Navbar(): ReactElement {
           >
             BroncoDirectMe
           </Typography>
-          {/* MOBILE VIEW: Icon button and text element */}
+          {/* DESKTOP VIEW: Icon button and text element */}
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             <Stack direction="row" spacing={2} paddingTop={1}>
@@ -141,12 +129,12 @@ export default function Navbar(): ReactElement {
                 href="https://chrome.google.com/webstore/detail/broncodirectme/kcbdmdlehcmkgknmmfjjiaclhpplibda"
                 target="_blank"
                 rel="noopener"
+                endIcon={<Launch />}
               >
                 Download
               </Button>
             </Stack>
           </Box>
-          {/* DESKTOP VIEW: Responsive navbar */}
         </Toolbar>
       </Container>
     </AppBar>

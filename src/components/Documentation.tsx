@@ -5,6 +5,7 @@ import './Documentation.css';
 
 function Documentation(): ReactElement {
   useEffect(() => {
+    document.title = 'Documentation - BroncoDirectMe';
     const script = document.createElement('script');
 
     script.src =
@@ -27,13 +28,14 @@ function Documentation(): ReactElement {
       role="flatdoc"
       className="big-h3 large-brief no-literate documentationElm"
     >
-      <div className="header">
+      <div className="header" id="main">
         <div className="left">
-          <h1>BroncoDirectMe</h1>
+          <h1 style={{ color: "#6D6D8D" }}>BroncoDirectMe</h1>
         </div>
         <div className="right">
           {/* GitHub buttons: see http://ghbtns.com */}
           <iframe
+            title="Star this project on GitHub"
             src="https://ghbtns.com/github-btn.html?user=BroncoDirectMe&amp;repo=Website&amp;type=watch&amp;count=true"
             width="110"
             height="20"

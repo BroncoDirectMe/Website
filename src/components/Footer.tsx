@@ -9,6 +9,8 @@ import {
   Typography,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import './Footer.css';
+import { Launch } from '@mui/icons-material';
 
 export default function Footer(): ReactElement {
   return (
@@ -54,6 +56,7 @@ export default function Footer(): ReactElement {
           href="https://chrome.google.com/webstore/detail/broncodirectme/kcbdmdlehcmkgknmmfjjiaclhpplibda"
         >
           Download
+          <Launch sx={{ paddingTop: 0.5 }} />
         </Link>
         <Link variant="h6" color="black" underline="none" href="documentation">
           Docs
@@ -65,7 +68,7 @@ export default function Footer(): ReactElement {
 
       <Accordion
         sx={{
-          backgroundColor: '#8f8c8c',
+          backgroundColor: '#757575',
           color: 'white',
           border: '3px solid gray',
         }}
@@ -77,6 +80,7 @@ export default function Footer(): ReactElement {
           }
           aria-controls="panel1a-content"
           id="panel1a-header"
+          className="disclaimer-btn"
         >
           <Typography sx={{ fontSize: '1.5em' }}>Disclaimer</Typography>
         </AccordionSummary>

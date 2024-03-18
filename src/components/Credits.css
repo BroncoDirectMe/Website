@@ -1,0 +1,3 @@
+.profile-btn:focus-visible {
+  outline: dashed 3px #0114DF !important;
+}

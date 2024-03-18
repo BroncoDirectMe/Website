@@ -1,0 +1,7 @@
+.disclaimer-btn:focus-visible {
+  outline: dashed 3px #80ECFF !important;
+}
+
+a:focus-visible {
+  outline: dashed 3px #008299 !important;
+}
